@@ -1,0 +1,59 @@
+<!-- @import 'partials/head.kit' -->
+
+    <!-- @import 'partials/nav.kit' -->
+
+    <!-- @import 'partials/header.kit' -->
+
+    <section class="hl_wrapper">
+
+      <section class="hl_wrapper--inner hl_social hl_social--calendar" id="social">
+        <div class="container-fluid">
+
+          <div class="alert --orange" role="alert">
+            <i class="fas fa-bullhorn"></i>
+            There is 1 post waiting to be reviewed before it can be published.
+          </div>
+
+          <div class="social-calendar" id="social-calendar"></div>
+          <script>
+            $(document).ready(function () {
+              $('#social-calendar').fullCalendar({
+                events: [
+                  {
+                    title: '9:30 AM',
+                    start: '2018-06-18',
+                    color: '#37ca37'
+                  },
+                  {
+                    title: '9:30 AM',
+                    start: '2018-06-19',
+                    color: '#876cff'
+                  },
+                  {
+                    title: '9:30 AM',
+                    start: '2018-06-20',
+                    color: '#ff7402'
+                  },
+                  {
+                    title: '9:30 AM',
+                    start: '2018-06-21',
+                    color: '#ff7402'
+                  }
+                ],
+                eventRender: function (event, element) {
+                  $(element).popover({
+                    placement: 'top',
+                    html: true,
+                    template: '<div class="popover calendar-popover" role="tooltip"><div class="popover-body"></div></div>',
+                    content: '<div class="calendar-popover-header"><h4>Meeting!</h4><p class="date-time">30 April 2018 <span class="time">9.30 AM</span></p><i class="icon icon-close popover-close"></i></div><div class="calendar-popover-body"><div class="calendar-label --orange">Waiting for review</div><img src="./img/image-sample.jpg" alt="image"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur luctus lobortis. Nulla in lobortis nisl, id dignissim lectus. Aenean a velit non dui ornare volutpat.</p></div><div class="calendar-popover-footer"><button type="button" class="btn btn-light3">Edit</button><button type="button" class="btn btn-blue">Mark Reviewed</button></div>'
+                  });
+                }
+              });
+            });
+          </script>
+        </div>
+      </section><!-- END of .hl_social -->
+
+    </section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

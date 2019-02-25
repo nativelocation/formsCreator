@@ -1,0 +1,265 @@
+<!-- @import 'partials/head.kit' -->
+
+<!-- @import 'partials/nav.kit' -->
+
+<!-- @import 'partials/header.kit' -->
+
+<section class="hl_wrapper">
+
+  <section class="hl_wrapper--inner hl_settings hl_settings--sms" id="settings">
+
+    <div class="hl_settings--header">
+      <div class="container-fluid">
+        <h2>Settings</h2>
+        <ul class="hl_settings--nav">
+          <li>
+            <a href="./settings-profile.html">Profile</a>
+          </li>
+          <li>
+            <a href="./settings-company.html">Company</a>
+          </li>
+          <li>
+            <a href="./settings-emails.html">Emails</a>
+          </li>
+          <li class="active">
+            <a href="./settings-sms.html">SMS</a>
+          </li>
+          <li>
+            <a href="./settings-customize-communication.html">Customize Communication</a>
+          </li>
+          <li>
+            <a href="./settings-team-management.html">Team Management</a>
+          </li>
+          <li>
+            <a href="./settings-integrations.html">Integrations</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hl_settings--body">
+      <div class="container-fluid">
+
+        <div class="hl_settings--controls">
+          <div class="hl_settings--controls-left">
+            <h2>Customize Review SMS</h2>
+          </div>
+          <div class="hl_settings--controls-right">
+            <div class="toggle-control">
+              <p class="green">Active</p>
+              <div class="toggle">
+                <input type="checkbox" class="tgl tgl-light" id="control-tgl1" checked="">
+                <label class="tgl-btn" for="control-tgl1"></label>
+              </div>
+            </div>
+            <button type="button" class="btn btn-light btn-sm"><i class="icon icon-send"></i><span class="sr-only">Download</span>
+            </button>
+            <button type="button" class="btn btn-light btn-sm"><i class="icon icon-eye2"></i><span class="sr-only">Download</span></button>
+            <button type="button" class="btn btn-success"><i class="icon icon-ok"></i> Save</button>
+            <select class="selectpicker more-select">
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="hl_settings--with-preview">
+
+          <div class="hl_settings--main">
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3>Review Request with Image</h3>
+                <div class="card-control-right">
+                  <p>Image Turned On!</p>
+                  <div class="toggle">
+                    <input type="checkbox" class="tgl tgl-light" id="tgl" checked>
+                    <label class="tgl-btn" for="tgl"></label>
+                  </div>
+                  <span><i class="icon icon-eye"></i></span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row align-items-md-stretch hl_settings--sms-color">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="box active">
+                        <div class="option option-lg">
+                          <input type="checkbox" id="tgl1" checked>
+                          <label for="tgl1"></label>
+                        </div>
+                        <div>
+                          <h4>Thank you for your business!</h4>
+                          <p>Please, leave a review.</p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block">Click on the link below</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="box">
+                        <div class="option option-lg">
+                          <input type="checkbox" id="tgl2">
+                          <label for="tgl2"></label>
+                        </div>
+                        <p>
+                          <strong>Background Image
+                            <span>*</spa>
+                          </strong> The proposed size is 620*110px
+                          <br> jpg., png., gif.</p>
+                        <button type="button" class="btn btn-primary btn-block">Upload Image</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row hl_settings--color-select">
+                  <div class="col-4">
+                    <label>Background Color</label>
+                    <div class="color-select">
+                      <p>#188bf6</p>
+                      <div class="color-selected" style="background-color: #188bf6;"></div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <label>Text Color</label>
+                    <div class="color-select">
+                      <p>#ffffff</p>
+                      <div class="color-selected" style="background-color: #fff;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3>1. SMS sent to user</h3>
+                <span><i class="icon icon-eye"></i></span>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Message from</label>
+                  <input type="text" class="form-control" placeholder="Message from">
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea rows="5" class="form-control" placeholder="Message"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3>2. Landing Page</h3>
+                <span><i class="icon icon-eye"></i></span>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Question</label>
+                  <input type="text" class="form-control" placeholder="Question">
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Positive Answer</label>
+                      <input type="text" class="form-control" placeholder="Positive Answer">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Negative Answer</label>
+                      <input type="text" class="form-control" placeholder="Negative Answer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding --blue">
+                <h3>3. Promoters Sent to</h3>
+                <div class="card-control-right">
+                  <ul class="list-inline">
+                    <li class="list-inline-item active">Adroid</li>
+                    <li class="list-inline-item">iOS</li>
+                  </ul>
+                  <span><i class="icon icon-eye2"></i></span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-group review-link">
+                  <label>Review Link #1</label>
+                  <div class="review-link-item --google">
+                    <i class="icon icon-google"></i>
+                    <input type="text" class="form-control" placeholder="URL" value="Google">
+                  </div>
+                  <div class="review-link-item --link">
+                    <i class="icon icon-link"></i>
+                    <input type="text" class="form-control" placeholder="google.com/places/">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3>4. Not Recommended Page</h3>
+                <span><i class="icon icon-eye"></i></span>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea rows="5" class="form-control" placeholder="Message"></textarea>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="hl_settings--preview">
+            <div class="hl_settings--preview-inner">
+              <div class="hl_sms-preview">
+                <div class="hl_sms-preview-header">
+                  <i class="icon icon-menu"></i>
+                  <h4>Nike Store #32</h4>
+                </div>
+                <div class="hl_sms-preview-body">
+                  <div class="message-wrap">
+                    <div class="avatar --sm">
+                      <div class="avatar_img">
+                        <img src="./img/nike-logo.jpg" alt="Logo">
+                      </div>
+                    </div>
+                    <div class="message-bubble" style="background-color: #188bf6;">
+                      <img src="./img/image-sample.jpg" alt="image">
+                    </div>
+                  </div>
+                  <div class="message-wrap">
+                    <div class="avatar --sm">
+                      <div class="avatar_img">
+                        <img src="./img/nike-logo.jpg" alt="Logo">
+                      </div>
+                    </div>
+                    <div class="message-bubble" style="background-color: #188bf6;">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta consectetur corrupti labore aliquam placeat provident.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="hl_sms-preview-footer">
+                  <p>Enter message</p>
+                  <button type="button" class="btn btn-green-lt">Send</button>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- END of .settings-profile -->
+
+</section><!-- END of .hl_settings--sms -->
+
+<!-- @import 'partials/foot.kit' -->

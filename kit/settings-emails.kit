@@ -1,0 +1,264 @@
+<!-- @import 'partials/head.kit' -->
+
+<!-- @import 'partials/nav.kit' -->
+
+<!-- @import 'partials/header.kit' -->
+
+<section class="hl_wrapper">
+
+  <section class="hl_wrapper--inner hl_settings hl_settings--emails" id="settings">
+
+    <div class="hl_settings--header">
+      <div class="container-fluid">
+        <h2>Settings</h2>
+        <ul class="hl_settings--nav">
+          <li>
+            <a href="./settings-profile.html">Profile</a>
+          </li>
+          <li>
+            <a href="./settings-company.html">Company</a>
+          </li>
+          <li class="active">
+            <a href="./settings-emails.html">Emails</a>
+          </li>
+          <li>
+            <a href="./settings-sms.html">SMS</a>
+          </li>
+          <li>
+            <a href="./settings-customize-communication.html">Customize Communication</a>
+          </li>
+          <li>
+            <a href="./settings-team-management.html">Team Management</a>
+          </li>
+          <li>
+            <a href="./settings-integrations.html">Integrations</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hl_settings--body">
+      <div class="container-fluid">
+
+        <div class="hl_settings--controls">
+          <div class="hl_settings--controls-left">
+            <h2>“Will you review us” Email</h2>
+          </div>
+          <div class="hl_settings--controls-right">
+            <div class="toggle-control">
+              <p class="green">Active</p>
+              <div class="toggle">
+                <input type="checkbox" class="tgl tgl-light" id="control-tgl1" checked="">
+                <label class="tgl-btn" for="control-tgl1"></label>
+              </div>
+            </div>
+            <button type="button" class="btn btn-light btn-sm"><i class="icon icon-send"></i><span class="sr-only">Download</span>
+            </button>
+            <button type="button" class="btn btn-light btn-sm"><i class="icon icon-eye2"></i><span class="sr-only">Download</span></button>
+            <button type="button" class="btn btn-success"><i class="icon icon-ok"></i> Save</button>
+            <select class="selectpicker more-select">
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="hl_settings--with-preview">
+
+          <div class="hl_settings--main">
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3>1. Personalize Design</h3>
+                <span><i class="icon icon-eye"></i></span>
+              </div>
+              <div class="card-body">
+                <div class="row align-items-md-stretch hl_settings--email-color">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="box">
+                        <div class="option option-lg">
+                          <input type="checkbox" id="tgl">
+                          <label for="tgl"></label>
+                        </div>
+                        <img src="./img/logo-settings-sample.png" alt="Logo">
+                        <button type="button" class="btn btn-primary btn-block">Change</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="box">
+                        <div class="option option-lg">
+                          <input type="checkbox" id="tgl2">
+                          <label for="tgl2"></label>
+                        </div>
+                        <p><strong>Background Image <span>*</spa></strong> The proposed size is 620*110px<br> jpg., png., gif.</p>
+                        <button type="button" class="btn btn-primary btn-block">Upload Image</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row hl_settings--color-select">
+                  <div class="col-4">
+                    <label>Top Background Color</label>
+                    <div class="color-select">
+                      <p>#ffffff</p>
+                      <div class="color-selected" style="background-color: #fff;"></div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <label>Review Number Color</label>
+                    <div class="color-select">
+                      <p>#2a3135</p>
+                      <div class="color-selected" style="background-color: #2a3135;"></div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <label>Star Rating Color</label>
+                    <div class="color-select">
+                      <p>#ffbc00</p>
+                      <div class="color-selected" style="background-color: #ffbc00;"></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="foot-note"><span>*</span> If you use an image as a background, top background color will be hidden.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding --blue">
+                <h3>2. Email Sent to the User</h3>
+                <span><i class="icon icon-eye2"></i></span>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Subject</label>
+                  <input type="text" class="form-control" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                  <label>Heading</label>
+                  <input type="text" class="form-control" placeholder="Heading">
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea rows="5" class="form-control" placeholder="Message"></textarea>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                    <label>Positive Answer</label>
+                    <input type="text" class="form-control" placeholder="Positive Answer">
+                  </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                    <label>Negative Answer</label>
+                    <input type="text" class="form-control" placeholder="Negative Answer">
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3>+ Personalized Touch <span>New</span></h3>
+                <div class="card-control-right">
+                  <p>Turned On!</p>
+                  <div class="toggle">
+                    <input type="checkbox" class="tgl tgl-light" id="tgl1" checked="">
+                    <label class="tgl-btn" for="tgl1"></label>
+                  </div>
+                  <span><i class="icon icon-eye"></i></span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>This function allows you to add a “personalized touch” by adding your image at the bottom of the email.</p>
+                <hr class="tall">
+                <div class="personal-logo">
+                  <div class="picture">
+                    <!-- <img src="img/img-profile-picture-sample.png" alt="Name"> -->
+                  </div>
+                  <div class="picture-text">
+                    <h4>Personal Logo</h4>
+                    <p>The proposed size is 512*512px</p>
+                    <p>no bigger than 2.5mb</p>
+                    <div class="btns">
+                      <button type="button" class="btn btn-primary">Upload</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                  <label>Company Role</label>
+                  <input type="email" class="form-control" placeholder="Company Role">
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3>3. Positive Answer Setup</h3>
+                <span><i class="icon icon-eye"></i></span>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Heading</label>
+                  <input type="text" class="form-control" placeholder="Heading">
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea rows="5" class="form-control" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group review-link">
+                  <label>Review Link #1</label>
+                  <div class="review-link-item --google">
+                    <i class="icon icon-google"></i>
+                    <input type="text" class="form-control" placeholder="URL" value="Google">
+                  </div>
+                  <div class="review-link-item --link">
+                    <i class="icon icon-link"></i>
+                    <input type="text" class="form-control" placeholder="google.com/places/">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3>4. Negative Answer Setup</h3>
+                <span><i class="icon icon-eye"></i></span>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Heading</label>
+                  <input type="text" class="form-control" placeholder="Heading">
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea rows="5" class="form-control" placeholder="Message"></textarea>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="hl_settings--preview">
+            <div class="hl_settings--preview-inner">
+              
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- END of .hl_settings--emails -->
+
+</section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

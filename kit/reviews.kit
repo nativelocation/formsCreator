@@ -1,0 +1,382 @@
+<!-- @import 'partials/head.kit' -->
+
+    <!-- @import 'partials/nav.kit' -->
+
+    <!-- @import 'partials/header.kit' -->
+
+    <section class="hl_wrapper">
+
+      <section class="hl_wrapper--inner hl_reviews" id="reviews">
+        <div class="container-fluid">
+          
+          <div class="hl_controls">
+            <div class="hl_controls--left">
+              <select class="selectpicker" data-width="fit">
+                <option>All Reviews</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+              <p class="total">436 Total</p>
+            </div>
+            <div class="hl_controls--right">
+              <select class="selectpicker" data-width="fit">
+                <option>Latest</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+              <div class="search-form">
+                <i class="icon icon-loupe"></i>
+                <input type="text" class="form-control form-light" placeholder="Search Reviews">
+              </div>
+              <button type="button" class="btn btn-light btn-sm hl_reviews--filter-btn" id="hl_reviews--filter-btn"><span>Filters</span> <i class="icon icon-settings-2"></i></button>
+              <button type="button" class="btn btn-light btn-sm"><i class="icon icon-download"></i><span class="sr-only">Download</span></button>
+            </div>
+          </div>
+
+          <div class="hl_reviews--group" id="hl_reviews--filter-group">
+            <div class="hl_reviews--filter" id="hl_reviews--filter">
+              <div class="form-group">
+                <label>Minimal Rating</label>
+                <select class="selectpicker" title="Select">
+                  <option data-content="<i class='icon icon-star-filled'></i> 1">1</option>
+                  <option data-content="<i class='icon icon-star-filled'></i> 2">2</option>
+                  <option data-content="<i class='icon icon-star-filled'></i> 3">3</option>
+                  <option data-content="<i class='icon icon-star-filled'></i> 3">4</option>
+                  <option data-content="<i class='icon icon-star-filled'></i> 3">5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Max Rating</label>
+                <select class="selectpicker" title="Select">
+                  <option data-content="<i class='icon icon-star-filled'></i> 1">1</option>
+                  <option data-content="<i class='icon icon-star-filled'></i> 2">2</option>
+                  <option data-content="<i class='icon icon-star-filled'></i> 3">3</option>
+                  <option data-content="<i class='icon icon-star-filled'></i> 3">4</option>
+                  <option data-content="<i class='icon icon-star-filled'></i> 3">5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Date Range</label>
+                <select class="selectpicker" title="Select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>User</label>
+                <select class="selectpicker" title="Select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Certified User</label>
+                <select class="selectpicker" title="Select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Tags</label>
+                <select class="selectpicker" title="Select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              <a href="#0">Clear Filter</a>
+            </div>
+            <div class="card hl_reviews--item active">
+              <div class="card-header">
+                <div class="card-header--left">
+                  <div class="avatar --sm">
+                    <div class="avatar_img">
+                      <img src="./img/logo-twitter.png" alt="Avatar Name">
+                    </div>
+                    <h4>Christian Edwards</h4>
+                  </div>
+                  <div class="rating --sm">
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star-half"></i>
+                    <i class="icon icon-star"></i>
+                  </div>
+                  <i class="icon-positive"></i>
+                </div>
+                <div class="card-header--right">
+                  <p class="date">12 Jun 2016</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum molestias nihil temporibus accusantium sed nesciunt iusto vero dolore accusamus suscipit quo distinctio illum dolores, ex laudantium inventore vel ab dolorem!</p>
+              </div>
+              <div class="card-footer">
+                <div class="card-footer--left">
+                  <a data-toggle="collapse" href="#respond1" role="button" aria-expanded="false" class="respond-toggle collapsed"><span>Respond</span></a>
+                  <span class="spacer">&bull;</span>
+                  <div class="dropdown --no-caret">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Share
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item --shared" href="#"><i class="icon icon-facebooksm"></i> Facebook</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-twittersm"></i> Twitter</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-googleplussm"></i> Google+</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-googlesm"></i> Website</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item add-account" href="#">+ Add Account</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer--right">
+                  <div class="comment-count">
+                    <i class="icon icon-bubble-filled"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="toggle">
+                    <input type="checkbox" class="tgl tgl-light" id="tgl1" checked>
+                    <label class="tgl-btn" for="tgl1"></label>
+                  </div>
+                  <select class="selectpicker more-select">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="comment collapse" id="respond1">
+                <div class="comment--inner">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample3.png" alt="Avatar Name">
+                    </div>
+                  </div>
+                  <input type="text" class="form-control">
+                  <button type="button" class="btn btn-blue">Respond</button>
+                </div>
+              </div>
+            </div>
+            <div class="card hl_reviews--item">
+              <div class="card-header">
+                <div class="card-header--left">
+                  <div class="avatar --sm">
+                    <div class="avatar_img">
+                      <img src="./img/logo-google+.png" alt="Avatar Name">
+                    </div>
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample2.png" alt="Avatar Name">
+                    </div>
+                    <h4>Samantha R. Omar</h4>
+                  </div>
+                  <div class="rating --sm">
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star"></i>
+                    <i class="icon icon-star"></i>
+                    <i class="icon icon-star"></i>
+                  </div>
+                  <i class="icon-negative"></i>
+                </div>
+                <div class="card-header--right">
+                  <p class="date">12 Jun 2016</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum molestias nihil temporibus accusantium sed nesciunt iusto vero dolore accusamus suscipit quo distinctio illum dolores, ex laudantium inventore vel ab dolorem!</p>
+              </div>
+              <div class="card-footer">
+                <div class="card-footer--left">
+                  <a data-toggle="collapse" href="#respond2" role="button" aria-expanded="false" class="respond-toggle collapsed"><span>Respond</span></a>
+                  <span class="spacer">&bull;</span>
+                  <div class="dropdown --no-caret">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Share
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="icon icon-facebooksm"></i> Facebook</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-twittersm"></i> Twitter</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-googleplussm"></i> Google+</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-googlesm"></i> Website</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item add-account" href="#">+ Add Account</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer--right">
+                  <div class="toggle">
+                    <input type="checkbox" class="tgl tgl-light" id="tgl2" >
+                    <label class="tgl-btn" for="tgl2"></label>
+                  </div>
+                  <select class="selectpicker more-select">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="comment collapse" id="respond2">
+                <div class="comment--inner">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                    </div>
+                  </div>
+                  <input type="text" class="form-control">
+                  <button type="button" class="btn btn-blue">Respond</button>
+                </div>
+              </div>
+            </div>
+            <div class="card hl_reviews--item">
+              <div class="card-header">
+                <div class="card-header--left">
+                  <div class="avatar --sm">
+                    <div class="avatar_img">
+                      <img src="./img/logo-facebook.png" alt="Avatar Name">
+                    </div>
+                    <h4>Michael O. Epps</h4>
+                  </div>
+                  <div class="rating --sm">
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star"></i>
+                    <i class="icon icon-star"></i>
+                    <i class="icon icon-star"></i>
+                  </div>
+                  <i class="icon-neutral"></i>
+                </div>
+                <div class="card-header--right">
+                  <p class="date">12 Jun 2016</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum molestias nihil temporibus accusantium sed nesciunt iusto vero dolore accusamus suscipit quo distinctio illum dolores, ex laudantium inventore vel ab dolorem!</p>
+              </div>
+              <div class="card-footer">
+                <div class="card-footer--left">
+                  <a data-toggle="collapse" href="#respond3" role="button" aria-expanded="false" class="respond-toggle collapsed"><span>Respond</span></a>
+                  <span class="spacer">&bull;</span>
+                  <div class="dropdown --no-caret">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Share
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="icon icon-facebooksm"></i> Facebook</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-twittersm"></i> Twitter</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-googleplussm"></i> Google+</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-googlesm"></i> Website</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item add-account" href="#">+ Add Account</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer--right">
+                  <div class="toggle">
+                    <input type="checkbox" class="tgl tgl-light" id="tgl3" checked>
+                    <label class="tgl-btn" for="tgl3"></label>
+                  </div>
+                  <select class="selectpicker more-select">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="comment collapse" id="respond3">
+                <div class="comment--inner">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                    </div>
+                  </div>
+                  <input type="text" class="form-control">
+                  <button type="button" class="btn btn-blue">Respond</button>
+                </div>
+              </div>
+            </div>
+            <div class="card hl_reviews--item">
+              <div class="card-header">
+                <div class="card-header--left">
+                  <div class="avatar --sm">
+                    <div class="avatar_img">
+                      <img src="./img/logo-google.png" alt="Avatar Name">
+                    </div>
+                    <h4>Christian Edwards</h4>
+                  </div>
+                  <div class="rating --sm">
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star-filled"></i>
+                    <i class="icon icon-star-half"></i>
+                    <i class="icon icon-star"></i>
+                  </div>
+                  <i class="icon-positive"></i>
+                </div>
+                <div class="card-header--right">
+                  <p class="date">12 Jun 2016</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum molestias nihil temporibus accusantium sed nesciunt iusto vero dolore accusamus suscipit quo distinctio illum dolores, ex laudantium inventore vel ab dolorem!</p>
+              </div>
+              <div class="card-footer">
+                <div class="card-footer--left">
+                  <a data-toggle="collapse" href="#respond4" role="button" aria-expanded="false" class="respond-toggle collapsed"><span>Respond</span></a>
+                  <span class="spacer">&bull;</span>
+                  <div class="dropdown --no-caret">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Share
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="icon icon-facebooksm"></i> Facebook</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-twittersm"></i> Twitter</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-googleplussm"></i> Google+</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-googlesm"></i> Website</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item add-account" href="#">+ Add Account</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer--right">
+                  <div class="comment-count">
+                    <i class="icon icon-bubble-filled"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="toggle">
+                    <input type="checkbox" class="tgl tgl-light" id="tgl4" checked>
+                    <label class="tgl-btn" for="tgl4"></label>
+                  </div>
+                  <select class="selectpicker more-select">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="comment collapse" id="respond4">
+                <div class="comment--inner">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                    </div>
+                  </div>
+                  <input type="text" class="form-control">
+                  <button type="button" class="btn btn-blue">Respond</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section><!-- END of .hl_reviews -->
+
+    </section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

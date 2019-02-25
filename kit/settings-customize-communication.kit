@@ -1,0 +1,215 @@
+<!-- @import 'partials/head.kit' -->
+
+<!-- @import 'partials/nav.kit' -->
+
+<!-- @import 'partials/header.kit' -->
+
+<section class="hl_wrapper">
+
+  <section class="hl_wrapper--inner hl_settings hl_settings--customize-communication" id="settings">
+
+    <div class="hl_settings--header">
+      <div class="container-fluid">
+        <h2>Settings</h2>
+        <ul class="hl_settings--nav">
+          <li>
+            <a href="./settings-profile.html">Profile</a>
+          </li>
+          <li>
+            <a href="./settings-company.html">Company</a>
+          </li>
+          <li>
+            <a href="./settings-emails.html">Emails</a>
+          </li>
+          <li>
+            <a href="./settings-sms.html">SMS</a>
+          </li>
+          <li class="active">
+            <a href="./settings-customize-communication.html">Customize Communication</a>
+          </li>
+          <li>
+            <a href="./settings-team-management.html">Team Management</a>
+          </li>
+          <li>
+            <a href="./settings-integrations.html">Integrations</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hl_settings--body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="hl_settings--main col-lg-8">
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3><i class="icon icon-mail --blue"></i> Email</h3>
+                <div class="card-control-right">
+                  <p>Automatic emails turned on</p>
+                  <div class="toggle">
+                    <input type="checkbox" class="tgl tgl-light" id="tgl1" checked>
+                    <label class="tgl-btn" for="tgl1"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <p>Automatic “Review Request” emails are sent directly to all your customers. Below you can costumize when they are sent out.</p>
+                </div>
+                <div class="form-group">
+                  <label>When to send email after check-in?</label>
+                  <div class="box-selection row">
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="when-send-email" id="hour-email">
+                        <label for="hour-email">Hour</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="when-send-email" id="day-email" checked>
+                        <label for="day-email">Day</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="when-send-email" id="week-email">
+                        <label for="week-email">Week</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="when-send-email" id="month-email">
+                        <label for="month-email">Month</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Repeat this every</label>
+                  <div class="box-selection row">
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="repeat-send-email" id="month-email">
+                        <label for="month-email">Month</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="repeat-send-email" id="month6-email" checked>
+                        <label for="month6-email">6 Month</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="repeat-send-email" id="year-email">
+                        <label for="year-email">Year</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="option">
+                  <input type="checkbox" id="send-weekly-email">
+                  <label for="send-weekly-email">Send me a weekly report of all review requests?</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header --no-right-padding">
+                <h3><i class="icon icon-sms"></i> SMS</h3>
+                <div class="card-control-right">
+                  <p>Automatic SMS turned on</p>
+                  <div class="toggle">
+                    <input type="checkbox" class="tgl tgl-light" id="tgl2" checked>
+                    <label class="tgl-btn" for="tgl2"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <p>Automatic “Review Request” sms are sent directly to all your customers. Below you can costumize when they are sent out.</p>
+                </div>
+                <div class="form-group">
+                  <label>When to send email after check-in?</label>
+                  <div class="box-selection row">
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="when-send-sms" id="hour-sms">
+                        <label for="hour-sms">Hour</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="when-send-sms" id="day-sms" checked>
+                        <label for="day-sms">Day</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="when-send-sms" id="week-sms">
+                        <label for="week-sms">Week</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="when-send-sms" id="month-sms">
+                        <label for="month-sms">Month</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Repeat this every</label>
+                  <div class="box-selection row">
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="repeat-send-sms" id="month-sms">
+                        <label for="month-sms">Month</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="repeat-send-sms" id="month6-sms" checked>
+                        <label for="month6-sms">6 Month</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="box-select">
+                        <input type="radio" name="repeat-send-sms" id="year-sms">
+                        <label for="year-sms">Year</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="option">
+                  <input type="checkbox" id="send-weekly-sms" checked>
+                  <label for="send-weekly-sms">Send me a weekly report of all review requests?</label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="hl_settings--sidebar col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon">
+                  <img src="img/icon-settings-company.svg">
+                </div>
+                <h3>Create a New Location</h3>
+                <p>With HighLevel you can create multiple companies and manage multiple locations.</p>
+                <a href="#" class="btn btn-green-lt"><i class="icon icon-plus"></i> Create New Location</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- END of .hl_settings--customize-communication -->
+
+</section>
+<!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

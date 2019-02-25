@@ -1,0 +1,590 @@
+<!-- @import 'partials/head.kit' -->
+
+    <!-- @import 'partials/nav.kit' -->
+
+    <!-- @import 'partials/header.kit' -->
+
+    <section class="hl_wrapper">
+
+      <section class="hl_wrapper--inner hl_social" id="social">
+        <div class="container-fluid">
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editpost-modal">
+            Edit Post Modal
+          </button>
+          <br>
+          <br>
+          
+          <!-- Edit/Post Modal -->
+          <div class="modal fade hl_social--edit-post-modal" id="editpost-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog --full" role="document">
+              <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h3>Edit Post</h3>
+                        <div class="card hl_edit-post-card">
+                          <div class="card-body">
+                            <div class="social-post-form">
+                              <div class="avatar">
+                                <div class="avatar_img">
+                                  <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                                </div>
+                              </div>
+                              <textarea class="form-control" rows="4" placeholder="Enter text here"></textarea>
+                              <a href="#" class="dots"><i class="icon icon-dots"></i></a>
+                              <a href="#" class="photo"><i class="icon icon-camera"></i></a>
+                            </div>
+                            <div class="social-post-media">
+                              <div class="media-preview">
+                                <img src="http://via.placeholder.com/150x100" class="image-preview">
+                                <div class="media-preview-text">
+                                  <h4>img(02).png</h4>
+                                  <p>245kb</p>
+                                </div>
+                                <a href="#" class="remove"><i class="icon icon-close"></i></a>
+                              </div>
+                              <div class="media-preview">
+                                <img src="http://via.placeholder.com/150x80" class="image-preview">
+                                <div class="media-preview-text">
+                                  <textarea>Lorem ipsum dolor sit amet consectetur adipisicing elit.</textarea>
+                                  <textarea>Lorem ipsum dolor sit amet consectetur adipisicing elit.</textarea>
+                                  <p class="link">https://searchengineland.com/google-announces-new-features-for-retail-advertisers-at-smx-advanced-300001</p>
+                                </div>
+                                <a href="#" class="remove"><i class="icon icon-close"></i></a>
+                              </div>
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                              </div>
+                              <div class="drag-drop">
+                                <p>Drag or Drop Media Here</p>
+                              </div>
+                            </div>
+                            <div class="social-post-network">
+                              <h4>Network</h4>
+                              <select class="selectpicker" title="Select Social Network">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                              </select>
+                              <div class="selected-social-network">
+                                <div class="avatar">
+                                  <div class="avatar_img">
+                                    <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                                    <span class="icon --facebook">
+                                      <i class="fab fa-facebook-f"></i>
+                                    </span>
+                                  </div>
+                                  <a href="#" class="remove"><i class="icon icon-close"></i></a>
+                                </div>
+                                <div class="avatar">
+                                  <div class="avatar_img">
+                                    <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                                    <span class="icon --twitter">
+                                      <i class="fab fa-twitter"></i>
+                                    </span>
+                                  </div>
+                                  <a href="#" class="remove"><i class="icon icon-close"></i></a>
+                                </div>
+                                <div class="avatar">
+                                  <div class="avatar_img">
+                                    <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                                    <span class="icon --google-plus">
+                                      <i class="fab fa-google-plus-g"></i>
+                                    </span>
+                                  </div>
+                                  <a href="#" class="remove"><i class="icon icon-close"></i></a>
+                                </div>
+                                <div class="avatar">
+                                  <div class="avatar_img">
+                                    <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                                    <span class="icon --linkedin">
+                                      <i class="fab fa-linkedin-in"></i>
+                                    </span>
+                                  </div>
+                                  <a href="#" class="remove"><i class="icon icon-close"></i></a>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer">
+                            <a href="#">Need Review?</a>
+                            <div class="card-footer-btn">
+                              <a href="#" class="btn btn-primary">Cancel</a>
+                              <a href="#" class="btn btn-blue">Save</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card hl_edit-post-calendar">
+                          <div class="card-body">
+                            <h4>Schedule</h4>
+                            <div class="social-post-calendar" id="social-post-calendar"></div>
+                            <script>
+                              $(document).ready(function () {
+                                $('#social-post-calendar').fullCalendar({
+                                  events: [
+                                    {
+                                      title: '9:30 AM',
+                                      start: '2018-06-18',
+                                      color: '#37ca37'
+                                    }
+                                  ],
+                                });
+                              });
+                            </script>
+                            <div class="hl_edit-post-calendar-select">
+                              <select class="selectpicker">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                              <select class="selectpicker">
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                              </select>
+                              <select class="selectpicker">
+                                <option>AM</option>
+                                <option>PM</option>
+                              </select>
+                            </div>
+                            <div class="option">
+                              <input type="checkbox" id="repeat-post">
+                              <label for="repeat-post">Repeat this post</label>
+                            </div>
+                          </div>
+                          <div class="card-footer">
+                            <h4 class="scheduled-for">Scheduled for: <span>28 May 2018 9.30 AM</span></h4>
+                            <button type="button" class="btn btn-blue">Edit</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <h3>Preview Post</h3>
+                        <div class="hl_social--post-item card">
+                          <div class="card-header">
+                            <div class="avatar">
+                              <div class="avatar_img">
+                                <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                                <span class="icon --facebook">
+                                  <i class="fab fa-facebook-f"></i>
+                                </span>
+                              </div>
+                              <div class="avatar_text">
+                                <h4><strong>Test Tech</strong> via <span>Instagram</span></h4>
+                                <p>21 Jun 2018 <span>9.30 AM</span></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <img src="./img/image-sample2.jpg" alt="photo" class="post-image">
+                          </div>
+                          <div class="card-footer flex-column align-items-start">
+                            <input type="text" class="post-comment" value="Very Cool!! Looking forward to this!">
+                            <div class="social-tags">
+                              <a href="#" class="tag">#hashtag</a>
+                              <a href="#" class="tag">#awesome</a>
+                              <a href="#" class="tag">#cool</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="hl_social--post-item card">
+                          <div class="card-header">
+                            <div class="avatar">
+                              <div class="avatar_img">
+                                <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                                <span class="icon --twitter">
+                                  <i class="fab fa-twitter"></i>
+                                </span>
+                              </div>
+                              <div class="avatar_text">
+                                <h4><strong>Test Tech</strong> via <span>Instagram</span></h4>
+                                <p>21 Jun 2018 <span>9.30 AM</span></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <img src="./img/image-sample.jpg" alt="photo" class="post-image">
+                          </div>
+                          <div class="card-footer flex-column align-items-start">
+                            <input type="text" class="post-comment" value="Very Cool!! Looking forward to this!">
+                            <div class="social-tags">
+                              <a href="#" class="tag">#hashtag</a>
+                              <a href="#" class="tag">#awesome</a>
+                              <a href="#" class="tag">#cool</a>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card hl_social--overview-table">
+            <div class="card-header">
+              <h2>Social Media Overview</h2>
+            </div>
+            <div class="card-body --no-padding">
+              <div class="table-wrap">
+                <table class="table table-sort">
+                  <thead>
+                    <tr>
+                      <th>
+                        <!--Social Media-->
+                      </th>
+                      <th>Total Audience</th>
+                      <th>Total Audience</th>
+                      <th>Engagement</th>
+                      <th>Stories Created</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="table_social-icon">
+                          <span class="icon --facebook">
+                            <i class="fab fa-facebook-f"></i>
+                          </span>
+                          <p>Test Tech</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table_social-icon">
+                          <span class="icon --google-plus">
+                            <i class="fab fa-google-plus-g"></i>
+                          </span>
+                          <p>Test Tech</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table_social-icon">
+                          <span class="icon --instagram">
+                            <i class="fab fa-instagram"></i>
+                          </span>
+                          <p>Test Tech</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table_social-icon">
+                          <span class="icon --linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                          </span>
+                          <p>Test Tech</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table_social-icon">
+                          <span class="icon --twitter">
+                            <i class="fab fa-twitter"></i>
+                          </span>
+                          <p>Test Tech</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                      <td>
+                        <p class="table_social-total">1 <span>+0,1%</span></p>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="hl_controls">
+            <div class="hl_controls--left">
+              <h2>Recent Posts</h2>
+            </div>
+          </div>
+
+          <div class="hl_social--recent-posts row">
+            <div class="col-md-6">
+              <div class="hl_social--post-item card">
+                <div class="card-header">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample3.png" alt="Avatar Name">
+                      <span class="icon --facebook">
+                        <i class="fab fa-facebook-f"></i>
+                      </span>
+                    </div>
+                    <div class="avatar_text">
+                      <h4><strong>Test Tech</strong> via <span>Facebook</span></h4>
+                      <p>21 Jun 2018 <span>9.30 AM</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur luctus lobortis. Nulla in lobortis nisl, id dignissim lectus. Aenean a velit non dui ornare volutpat.</p>
+                  <div class="hl_social--post-item-details">
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><i class="fas fa-thumbs-up"></i> 122</li>
+                      <li class="list-inline-item"><i class="fas fa-comment"></i> 135</li>
+                      <li class="list-inline-item"><i class="fas fa-retweet"></i> 000</li>
+                    </ul>
+                    <a href="#">Details</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="hl_social--post-footer-item">
+                    <h4>Potential Reach</h4>
+                    <p>0</p>
+                  </div>
+                  <div class="hl_social--post-footer-item">
+                    <h4>Engagement</h4>
+                    <p>0</p>
+                  </div>
+                  <div class="hl_social--post-footer-item">
+                    <h4>Stories Created</h4>
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="hl_social--post-item card">
+                <div class="card-header">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample1.png" alt="Avatar Name">
+                      <span class="icon --google-plus">
+                        <i class="fab fa-google-plus-g"></i>
+                      </span>
+                    </div>
+                    <div class="avatar_text">
+                      <h4><strong>Test Tech</strong> via <span>Google+</span></h4>
+                      <p>21 Jun 2018 <span>9.30 AM</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur luctus lobortis. Nulla in lobortis nisl, id dignissim lectus. Aenean a velit non dui ornare volutpat.</p>
+                  <div class="hl_social--post-item-details">
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><i class="fas fa-thumbs-up"></i> 122</li>
+                      <li class="list-inline-item"><i class="fas fa-comment"></i> 135</li>
+                      <li class="list-inline-item"><i class="fas fa-retweet"></i> 000</li>
+                    </ul>
+                    <a href="#">Details</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="hl_social--post-footer-item">
+                    <h4>Potential Reach</h4>
+                    <p>0</p>
+                  </div>
+                  <div class="hl_social--post-footer-item">
+                    <h4>Engagement</h4>
+                    <p>0</p>
+                  </div>
+                  <div class="hl_social--post-footer-item">
+                    <h4>Stories Created</h4>
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="hl_social--post-item card">
+                <div class="card-header">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample2.png" alt="Avatar Name">
+                      <span class="icon --twitter">
+                        <i class="fab fa-twitter"></i>
+                      </span>
+                    </div>
+                    <div class="avatar_text">
+                      <h4><strong>Test Tech</strong> via <span>Twitter</span></h4>
+                      <p>21 Jun 2018 <span>9.30 AM</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur luctus lobortis. Nulla in lobortis nisl, id dignissim lectus. Aenean a velit non dui ornare volutpat.</p>
+                  <div class="hl_social--post-item-details">
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><i class="fas fa-thumbs-up"></i> 122</li>
+                      <li class="list-inline-item"><i class="fas fa-comment"></i> 135</li>
+                      <li class="list-inline-item"><i class="fas fa-retweet"></i> 000</li>
+                    </ul>
+                    <a href="#">Details</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="hl_social--post-footer-item">
+                    <h4>Potential Reach</h4>
+                    <p>0</p>
+                  </div>
+                  <div class="hl_social--post-footer-item">
+                    <h4>Engagement</h4>
+                    <p>0</p>
+                  </div>
+                  <div class="hl_social--post-footer-item">
+                    <h4>Stories Created</h4>
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="hl_social--post-item card">
+                <div class="card-header">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample4.png" alt="Avatar Name">
+                      <span class="icon --linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                      </span>
+                    </div>
+                    <div class="avatar_text">
+                      <h4><strong>Test Tech</strong> via <span>LinkedIn</span></h4>
+                      <p>21 Jun 2018 <span>9.30 AM</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur luctus lobortis. Nulla in lobortis nisl, id dignissim lectus. Aenean a velit non dui ornare volutpat.</p>
+                  <div class="hl_social--post-item-details">
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><i class="fas fa-thumbs-up"></i> 122</li>
+                      <li class="list-inline-item"><i class="fas fa-comment"></i> 135</li>
+                      <li class="list-inline-item"><i class="fas fa-retweet"></i> 000</li>
+                    </ul>
+                    <a href="#">Details</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="text-center">
+                    <em>Additional stats unavailable for this posts.</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="hl_social--post-item card">
+                <div class="card-header">
+                  <div class="avatar">
+                    <div class="avatar_img --yellow">
+                      CS
+                      <span class="icon --instagram">
+                        <i class="fab fa-instagram"></i>
+                      </span>
+                    </div>
+                    <div class="avatar_text">
+                      <h4><strong>Test Tech</strong> via <span>Instagram</span></h4>
+                      <p>21 Jun 2018 <span>9.30 AM</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur luctus lobortis. Nulla in lobortis nisl, id dignissim lectus. Aenean a velit non dui ornare volutpat.</p>
+                  <div class="hl_social--post-item-details">
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><i class="fas fa-thumbs-up"></i> 122</li>
+                      <li class="list-inline-item"><i class="fas fa-comment"></i> 135</li>
+                      <li class="list-inline-item"><i class="fas fa-retweet"></i> 000</li>
+                    </ul>
+                    <a href="#">Details</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="hl_social--post-footer-item">
+                    <h4>Potential Reach</h4>
+                    <p>0</p>
+                  </div>
+                  <div class="hl_social--post-footer-item">
+                    <h4>Engagement</h4>
+                    <p>0</p>
+                  </div>
+                  <div class="hl_social--post-footer-item">
+                    <h4>Stories Created</h4>
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+      </section><!-- END of .hl_social -->
+
+    </section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

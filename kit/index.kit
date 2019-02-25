@@ -1,0 +1,1215 @@
+<!-- @import 'partials/head.kit' -->
+
+    <!-- @import 'partials/nav.kit' -->
+
+    <!-- @import 'partials/header.kit' -->
+
+    <section class="hl_wrapper">
+
+      <section class="hl_wrapper--inner hl_dashboard" id="dashboard">
+        <div class="container-fluid">
+          <div class="card-group --wide-gutter">
+            <div class="card hl_dashboard--matters-added">
+              <div class="card-header">
+                <h2>Matters Added</h2>
+              </div>
+              <div class="card-body">
+                <h4>2017-05-31 to 2018-05-31</h4>
+                <h3>269</h3>
+                <ul class="bottom-stats">
+                  <li><span>Hired</span> <strong>163</strong></li>
+                  <li><span>Intake</span> <strong>38</strong></li>
+                  <li><span>Did Not Hire</span> <strong>63</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card hl_dashboard--pipeline-value">
+              <div class="card-header">
+                <h2>Pipeline Value</h2>
+              </div>
+              <div class="card-body">
+                <h4>2017-05-31 to 2018-05-31</p>
+                <h3>$2,596,580</h3>
+                <ul class="bottom-stats">
+                  <li><span>Hire</span> <strong>$2,184,025</strong></li>
+                  <li><span>Intake</span> <strong>$167,500</strong></li>
+                  <li><span>Did Not Hire</span> <strong>$245,055</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card hl_dashboard--conversion-rate">
+              <div class="card-header">
+                <h2>Conversion Rate</h2>
+              </div>
+              <div class="card-body">
+                <h4>2017-05-31 to 2018-05-31</h4>
+                <h3>62.45%</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-group">
+            <div class="card hl_dashboard--sales-funnel">
+              <div class="card-header">
+                <h2>Sales Funnel</h2>
+              </div>
+              <div class="card-body">
+                <div class="sales-funnel-chart" id="sales-funnel-chart"></div>
+                <!-- Sales Funnel Script Sample -->
+                <script type="text/javascript">
+                  Highcharts.chart('sales-funnel-chart', {
+                    colors: ['#188bf6', '#37ca37', '#e93d3d', '#ffbc00',],
+                    chart: {
+                      type: 'funnel',
+                      style: {
+                        fontFamily: 'Roboto'
+                      }
+                    },
+                    title: {
+                      text: 'Sales funnel',
+                      style: {
+                        color: '#2a3135',
+                      }
+                    },
+                    plotOptions: {
+                      series: {
+                        dataLabels: {
+                          enabled: true,
+                          format: '<b>{point.name}</b> ({point.y:,.0f})',
+                          color: '#607179',
+                          softConnector: true,
+                        },
+                        center: ['40%', '50%'],
+                        neckWidth: '30%',
+                        neckHeight: '25%',
+                        width: '80%'
+                      }
+                    },
+                    legend: {
+                      enabled: false
+                    },
+                    series: [{
+                      name: '',
+                      data: [
+                        ['Prospects', 8654],
+                        ['Appointments', 4064],
+                        ['Consults', 1987],
+                        ['Close', 976],
+                      ]
+                    }]
+                  });
+                </script>
+              </div>
+            </div>
+            <div class="card hl_dashboard--need-action">
+              <div class="card-header">
+                <h2>Opportunities - Need Action</h2>
+              </div>
+              <div class="card-body">
+                <div class="hl_tasks">
+                  <div class="hl_tasks--item --late">
+                    <div class="option">
+                      <input type="checkbox" id="task1">
+                      <label for="task1"></label>
+                    </div>
+                    <div class="hl_tasks--item-header">
+                      <h4>Client meeting</h4>
+                      <p>Late 1 day</p>
+                    </div>
+                    <p>Send a marketing campaign email to the client</p>
+                    <div class="hl_tasks--item-footer">
+                      <p>Due: <strong>Aug 2, 2018</strong></p>
+                      <p>Assigned to: <strong>James Robertson</strong></p>
+                    </div>
+                  </div>
+                  <div class="hl_tasks--item --due">
+                    <div class="option">
+                      <input type="checkbox" id="task2">
+                      <label for="task2"></label>
+                    </div>
+                    <div class="hl_tasks--item-header">
+                      <h4>Client meeting</h4>
+                      <p>Due in 3 days</p>
+                    </div>
+                    <p>Send a marketing campaign email to the client</p>
+                    <div class="hl_tasks--item-footer">
+                      <p>Due: <strong>Aug 2, 2018</strong></p>
+                      <p>Assigned to: <strong>James Robertson</strong></p>
+                    </div>
+                  </div>
+                  <div class="hl_tasks--item">
+                    <div class="option">
+                      <input type="checkbox" id="task3">
+                      <label for="task3"></label>
+                    </div>
+                    <div class="hl_tasks--item-header">
+                      <h4>Marketing campaign email</h4>
+                    </div>
+                    <p>Send a marketing campaign email to the client</p>
+                    <div class="hl_tasks--item-footer">
+                      <p>Due: <strong>Aug 2, 2018</strong></p>
+                      <p>Assigned to: <strong>James Robertson</strong></p>
+                    </div>
+                  </div>
+                  <div class="hl_tasks--item --done">
+                    <div class="option">
+                      <input type="checkbox" id="task4" checked>
+                      <label for="task4"></label>
+                    </div>
+                    <div class="hl_tasks--item-header">
+                      <h4>Call client</h4>
+                    </div>
+                    <p>Call client to schedule a demo for the Listings product</p>
+                    <div class="hl_tasks--item-footer">
+                      <p>Due: <strong>Aug 2, 2018</strong></p>
+                      <p>Assigned to: <strong>James Robertson</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card hl_dashboard--return-on-investment">
+            <div class="card-header">
+              <h2>Return on Investment</h2>
+              <select class="selectpicker more-select">
+                <option>Today</option>
+                <option>This Week</option>
+                <option>Last Week</option>
+                <option>This Month</option>
+                <option>Last 6 Months</option>
+                <option>This Year</option>
+              </select>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="dashboard_return-on-investment-chart" id="dashboard_return-on-investment-chart"></div>
+                  <!-- Return on Investment Script Sample -->
+                  <script type="text/javascript">
+                    Highcharts.chart('dashboard_return-on-investment-chart', {
+                      chart: {
+                        type: 'spline',
+                        style: {
+                          fontFamily: 'Roboto'
+                        }
+                      },
+                      plotOptions: {
+                        column: {
+                          groupPadding: 0.35,
+                          borderWidth: 0
+                        },
+                        series: {
+                          pointWidth: 6,
+                          borderRadius: 5
+                        }
+                      },
+                      legend: {
+                        enabled: false
+                      },
+                      title: {
+                        text: ''
+                      },
+                      xAxis: {
+                        lineColor: "#dfe3e4",
+                        tickColor: "#fff",
+                        categories: [
+                          'Mar',
+                          'Apr',
+                          'May',
+                          'Jun',
+                          'Jul',
+                          'Aug',
+                          'Sep',
+                          'Oct'
+                        ],
+                        labels: {
+                          style: {
+                            color: "#607179",
+                            fontSize: "14px"
+                          }
+                        }
+                      },
+                      yAxis: {
+                        gridLineColor: '#dfe3e4',
+                        title: {
+                          text: ''
+                        },
+                        labels: {
+                          style: {
+                            color: "#607179",
+                            fontSize: "14px"
+                          }
+                        }
+                      },
+                      series: [{
+                        name: 'Marketing Cost',
+                        data: [29.9, 51.5, 96.4, 79.2, 94.0, 116.0, 105.6, 118.5],
+                        color: '#ffbc00'
+                      }, {
+                        name: 'Estimate Revenue',
+                        data: [49.9, 61.5, 76.4, 89.2, 94.0, 106.0, 115.6, 128.5],
+                        color: '#188bf6'
+                      }]
+                    });
+                  </script>
+                </div>
+                <div class="col-lg-4">
+                  <div class="dashboard_return-on-investment-chart-stats-top">
+                    <div class="stats-left">
+                      <div class="stat-item --revenue">
+                        <h4>$312.224</h4>
+                        <p>Estimated Revenue</p>
+                      </div>
+                      <div class="stat-item --cost">
+                        <h4>$10.289</h4>
+                        <p>Marketing Costs</p>
+                      </div>
+                    </div>
+                    <div class="stats-right">
+                      <div class="stat-percentage">
+                        <h4>3614<span>%</span></h4>
+                        <p>ROI</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashboard_return-on-investment-chart-stats-bottom">
+                    <div class="stat-item">
+                      <h4>$10.289</h4>
+                      <p>Marketing costs</p>
+                    </div>
+                    <div class="stat-item">
+                      <h4>4208</h4>
+                      <p>Appointments</p>
+                    </div>
+                  </div>
+                  <div class="cost-aapointment">
+                    <h4>$2,00</h4>
+                    <p>Cost/Appointment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-group">
+            <div class="card hl_dashboard--reviews">
+              <div class="card-header">
+                <h2>Reviews <span>This Month</span></h2>
+                <select class="selectpicker more-select">
+                  <option>Today</option>
+                  <option>This Week</option>
+                  <option>Last Week</option>
+                  <option>This Month</option>
+                  <option>Last 6 Months</option>
+                  <option>This Year</option>
+                </select>
+              </div>
+              <div class="card-body">
+                <h3>822</h3>
+                <div class="hl_dashboard--reviews-stats row">
+                  <div class="col-sm-6">
+                    <h4><i class="icon icon-arrow-up-2"></i> +23.8%</h4>
+                    <p>growth in reviews from   the last week</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <h4><i class="icon-positive"></i>+52</h4>
+                    <p>positive reviews more than the last week</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="hl_dashboard--reviews-sources">
+                  <h4>Sources</h4>
+                  <ul class="sources_list list-inline">
+                    <li class="list-inline-item">
+                      <a href="#" class="google">Google+</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="facebook">Facebook</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="twitter">Twitter</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="add">Add</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card hl_dashboard--avg-rating">
+              <div class="card-header">
+                <h2>Avg. Rating <span>All Time</span></h2>
+                <select class="selectpicker more-select">
+                  <option>Today</option>
+                  <option>This Week</option>
+                  <option>Last Week</option>
+                  <option>This Month</option>
+                  <option>Last 6 Months</option>
+                  <option>This Year</option>
+                </select>
+              </div>
+              <div class="card-body">
+                <h3>3.5 <div class="rating"><i class="icon icon-star-filled"></i><i class="icon icon-star-filled"></i><i class="icon icon-star-filled"></i><i class="icon icon-star-half"></i><i class="icon icon-star"></i></div></h3>
+                <div class="rating_percentage">
+                  <!-- <h4><i class="icon icon-arrow-up-2 --green"></i> 5.10%</h4> -->
+                  <h4><i class="icon icon-minus"></i> 0.0%</h4>
+                  <!-- <h4><i class="icon icon-arrow-down-2 --red"></i> 0.0%</h4> -->
+                  <p>No movenet regarding your rating.</p>
+                </div>
+                <div class="rating_stats">
+                  <div class="rating_stats-item --star5">
+                    <h4><i class="icon icon-star-filled"></i> 5</h4>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                      <span>492</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rating_stats">
+                  <div class="rating_stats-item --star4">
+                    <h4><i class="icon icon-star-filled"></i> 4</h4>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 50%"></div>
+                      <span>278</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rating_stats">
+                  <div class="rating_stats-item --star3">
+                    <h4><i class="icon icon-star-filled"></i> 3</h4>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%"></div>
+                      <span>65</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rating_stats">
+                  <div class="rating_stats-item --star2">
+                    <h4><i class="icon icon-star-filled"></i> 2</h4>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 15%"></div>
+                      <span>14</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rating_stats">
+                  <div class="rating_stats-item --star1">
+                    <h4><i class="icon icon-star-filled"></i> 1</h4>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 5%"></div>
+                      <span>4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-group --wide-gutter">
+            <div class="card hl_dashboard--sentiment">
+              <div class="card-header">
+                <h2>Sentiment <span>This Month</span></h2>
+                <select class="selectpicker more-select">
+                  <option>Today</option>
+                  <option>This Week</option>
+                  <option>Last Week</option>
+                  <option>This Month</option>
+                  <option>Last 6 Months</option>
+                  <option>This Year</option>
+                </select>
+              </div>
+              <div class="card-body">
+                <div class="sentiment_review --positive">
+                  <div class="sentiment_review-inner">
+                    <h3>652</h3>
+                    <div class="sentiment_review-graph" id="sentiment_positive-review">
+                      <span class="percentage" data-percentage="71"></span>
+                    </div>
+                    <h4>71%</h4>
+                  </div>
+                  <p>Positive Reviews</p>
+                </div>
+                <hr>
+                <div class="sentiment_review --negative">
+                  <div class="sentiment_review-inner">
+                    <h3>113</h3>
+                    <div class="sentiment_review-graph" id="sentiment_negative-review">
+                      <span class="percentage" data-percentage="19"></span>
+                    </div>
+                    <h4>19%</h4>
+                  </div>
+                  <p>Negative Reviews</p>
+                </div>
+              </div>
+            </div>
+            <div class="card hl_dashboard--invites-goal">
+              <div class="card-header">
+                <h2>Invites Goal</h2>
+                <select class="selectpicker more-select">
+                  <option>Today</option>
+                  <option>This Week</option>
+                  <option>Last Week</option>
+                  <option>This Month</option>
+                  <option>Last 6 Months</option>
+                  <option>This Year</option>
+                </select>
+              </div>
+              <div class="card-body">
+                <div class="invites-goal_progress">
+                  <div class="semi-progress" data-progress="45">
+                    <div class="bar-wrap">
+                      <div class="bar"></div>
+                    </div>
+                  </div>
+                  <h3>391</h3>
+                  <hr>
+                  <h4>You are on Track!</h4>
+                  <p>You are close to your 190 invites goal</p>
+                </div>
+              </div>
+            </div>
+            <div class="card hl_dashboard--leaderboard-invites">
+              <div class="card-header">
+                <h2>Leaderboard for Invites <span>All Time</span></h2>
+                <select class="selectpicker more-select">
+                  <option>Today</option>
+                  <option>This Week</option>
+                  <option>Last Week</option>
+                  <option>This Month</option>
+                  <option>Last 6 Months</option>
+                  <option>This Year</option>
+                </select>
+              </div>
+              <div class="card-body">
+                <div class="leaderboard_item">
+                  <div class="avatar">
+                    <div class="avatar_img --pink">
+                      MS
+                    </div>
+                    <h4>Michelle Shean</h4>
+                  </div>
+                  <p><strong>918</strong> / 1020</p>
+                </div>
+                <div class="leaderboard_item">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample2.png" alt="Avatar Name">
+                    </div>
+                    <h4>Amanda Nunes</h4>
+                  </div>
+                  <p><strong>882</strong> / 1020</p>
+                </div>
+                <div class="leaderboard_item">
+                  <div class="avatar">
+                    <div class="avatar_img">
+                      <img src="./img/img-avatar-sample3.png" alt="Avatar Name">
+                    </div>
+                    <h4>Norman E. Parque</h4>
+                  </div>
+                  <p><strong>789</strong> / 1020</p>
+                </div>
+                <div class="leaderboard_item">
+                  <div class="avatar">
+                    <div class="avatar_img --navy">
+                      MR
+                    </div>
+                    <h4>Micha Robinson</h4>
+                  </div>
+                  <p><strong>652</strong> / 1020</p>
+                </div>
+                <div class="leaderboard_item">
+                  <div class="avatar">
+                    <div class="avatar_img --green">
+                      QJ
+                    </div>
+                    <h4>Quinton Jackson</h4>
+                  </div>
+                  <p><strong>0</strong> / 1020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card hl_dashboard--latest-review-requests">
+            <div class="card-header">
+              <h2>Latest Review Requests</h2>
+              <a href="#" class="card-header-link">View Reviews</a>
+              <select class="selectpicker more-select">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+            </div>
+            <div class="card-body --no-padding">
+              <div class="table-wrap">
+                <table class="table table-sort">
+                  <thead>
+                    <tr>
+                      <th data-sort="string">Invite Sent to <i class="icon icon-arrow-down-1"></i></th>
+                      <th data-sort="string">Email Sent to <i class="icon icon-arrow-down-1"></i></th>
+                      <th data-sort="string">Sent by <i class="icon icon-arrow-down-1"></i></th>
+                      <th>Date Sent</th>
+                      <th data-sort="string">Status <i class="icon icon-arrow-down-1"></i></th>
+                      <th><!--Actions--></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img">
+                            <img src="./img/img-avatar-sample2.png" alt="Avatar Name">
+                          </div>
+                          <h4>Amanda Nunes</h4>
+                        </div>
+                      </td>
+                      <td>leoa@myteam.com</td>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --orange">
+                            AN
+                          </div>
+                          <h4>Bruce Mann</h4>
+                        </div>
+                      </td>
+                      <td>12 Jun 2017</td>
+                      <td>
+                        <span class="table_status --sent">Sent</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-primary">View</button>
+                        <select class="selectpicker more-select">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --navy">
+                            GT
+                          </div>
+                          <h4>Gerald Terry</h4>
+                        </div>
+                      </td>
+                      <td>keanu.kub@hoeger.us</td>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --teal">
+                            RF
+                          </div>
+                          <h4>Ricardo Foster</h4>
+                        </div>
+                      </td>
+                      <td>10 Jun 2017</td>
+                      <td>
+                        <span class="table_status --sent">Sent</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-primary">View</button>
+                        <select class="selectpicker more-select">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --red">
+                            LP
+                          </div>
+                          <h4>Leon Palmer</h4>
+                        </div>
+                      </td>
+                      <td>leoa@myteam.com</td>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --yellow">
+                            SI
+                          </div>
+                          <h4>Samantha Irving</h4>
+                        </div>
+                      </td>
+                      <td>09 Jun 2017</td>
+                      <td>
+                        <span class="table_status --opened">Opened</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-primary">View</button>
+                        <select class="selectpicker more-select">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --lime">
+                            CA
+                          </div>
+                          <h4>Cecelia Atkins</h4>
+                        </div>
+                      </td>
+                      <td>keanu.kub@hoeger.us</td>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --pink">
+                            BM
+                          </div>
+                          <h4>Bruce Mann</h4>
+                        </div>
+                      </td>
+                      <td>09 Jun 2017</td>
+                      <td>
+                        <span class="table_status --clicked">Clicked</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-primary">View</button>
+                        <select class="selectpicker more-select">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --purple">
+                            LW
+                          </div>
+                          <h4>Leila White</h4>
+                        </div>
+                      </td>
+                      <td>leoa@myteam.com</td>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --blue">
+                            NP
+                          </div>
+                          <h4>Norman E. Parque</h4>
+                        </div>
+                      </td>
+                      <td>08 Jun 2017</td>
+                      <td>
+                        <span class="table_status --opened">Opened</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-primary">View</button>
+                        <select class="selectpicker more-select">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --gray">
+                            GT
+                          </div>
+                          <h4>Gerald Terry</h4>
+                        </div>
+                      </td>
+                      <td>keanu.kub@hoeger.us</td>
+                      <td>
+                        <div class="avatar">
+                          <div class="avatar_img --green">
+                            RF
+                          </div>
+                          <h4>Ricardo Foster</h4>
+                        </div>
+                      </td>
+                      <td>08 Jun 2017</td>
+                      <td>
+                        <span class="table_status --clicked">Clicked</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-primary">View</button>
+                        <select class="selectpicker more-select">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="card hl_dashboard--emails-sent">
+            <div class="card-header">
+              <h2>Emails Sent <span>This Week</span></h2>
+              <select class="selectpicker more-select">
+                <option>Today</option>
+                <option>This Week</option>
+                <option>Last Week</option>
+                <option>This Month</option>
+                <option>Last 6 Months</option>
+                <option>This Year</option>
+              </select>
+            </div>
+            <div class="card-body">
+              <ul class="dashboard_emails-sent-chart-stats list-inline">
+                <li class="list-inline-item">
+                  <h4>2,312</h4>
+                  <p>Emails Sent</p>
+                </li>
+                <li class="list-inline-item">
+                  <h4>6,212</h4>
+                  <p>Goal</p>
+                </li>
+                <li class="list-inline-item">
+                  <h4>912</h4>
+                  <p>Open Rate</p>
+                </li>
+                <li class="list-inline-item">
+                  <h4>541</h4>
+                  <p>Click Rate</p>
+                </li>
+                <li class="list-inline-item">
+                  <h4>102</h4>
+                  <p>Bounce</p>
+                </li>
+              </ul>
+              <div class="dashboard_emails-sent-chart" id="dashboard_emails-sent-chart"></div>
+              <!-- Email Sent Chart Script Sample -->
+              <script type="text/javascript">
+                Highcharts.chart('dashboard_emails-sent-chart', {
+                  chart: {
+                    type: 'column',
+                    style: {
+                      fontFamily: 'Roboto'
+                    }
+                  },
+                  plotOptions: {
+                    column: {
+                      groupPadding: 0.35,
+                      borderWidth: 0
+                    },
+                    series: {
+                      pointWidth: 6,
+                      borderRadius: 5
+                    }
+                  },
+                  legend: {
+                    enabled: false
+                  },
+                  title: {
+                    text: ''
+                  },
+                  xAxis: {
+                    lineColor: "#dfe3e4",
+                    tickColor: "#fff",
+                    categories: [
+                      'Mon',
+                      'Tue',
+                      'Wed',
+                      'Thu',
+                      'Fri',
+                      'Sat',
+                      'Jul',
+                      'Sun'
+                    ],
+                    labels: {
+                      style: {
+                        color: "#607179",
+                        fontSize: "14px"
+                      }
+                    }
+                  },
+                  yAxis: {
+                    gridLineColor: '#dfe3e4',
+                    title: {
+                      text: ''
+                    },
+                    labels: {
+                      style: {
+                        color: "#607179",
+                        fontSize: "14px"
+                      }
+                    }
+                  },
+                  series: [{
+                    name: 'Goal',
+                    type: 'spline',
+                    data: [89.9, 71.5, 106.4, 129.2, 104.0, 126.0, 105.6, 148.5],
+                    color: '#ffbc00'
+                  }, {
+                    name: 'Open Rate',
+                    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5],
+                    color: '#37ca37'
+                  }, {
+                    name: 'Click Rate',
+                    data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3],
+                    color: '#188bf6'
+                  }, {
+                    name: 'Bounce',
+                    data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6],
+                    color: '#e93d3d'
+                  }]
+                });
+              </script>
+            </div>
+          </div>
+          <div class="card hl_dashboard--website-visitors">
+            <div class="card-header">
+              <h2>Website visitors</h2>
+              <select class="selectpicker more-select">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+            </div>
+            <div class="card-body">
+              <div class="website-visitors--set1 row">
+                <div class="col-xl-6">
+                  <h3>Conversion Rate</h3>
+                  <div class="conversion-rate">
+                    <div class="total-visitor">
+                      <h4><i class="icon icon-visitors"></i> 501.112</h4>
+                      <p>Total visitors</p>
+                    </div>
+                    <div class="rate --blue">
+                      <h4>4,2 <span>%</span></h4>
+                      <p>Conversion</p>
+                    </div>
+                    <div class="appointments">
+                      <h4><i class="icon icon-appointments"></i> 21.108</h4>
+                      <p>Appointments</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <h3>Visitors by Device</h3>
+                  <div class="device_stats">
+                    <div class="device_stats-item --green">
+                      <h4><i class="icon icon-desktop"></i> Desktop</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                        <span>289.623</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device_stats">
+                    <div class="device_stats-item --blue">
+                      <h4><i class="icon icon-mobile"></i> Mobile</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%"></div>
+                        <span>128.971</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device_stats">
+                    <div class="device_stats-item --yellow">
+                      <h4><i class="icon icon-tablet"></i> Tablet</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                        <span>82.5181</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="website-visitors--set2 row">
+                <div class="col-xl-8">
+                  <div class="dashboard_emails-sent-chart" id="visitor-line-chart"></div>
+                  <!-- Visitor Line Chart Script Sample -->
+                  <script type="text/javascript">
+                    Highcharts.chart('visitor-line-chart', {
+                      chart: {
+                        type: 'column',
+                        style: {
+                          fontFamily: 'Roboto'
+                        }
+                      },
+                      plotOptions: {
+                        column: {
+                          stacking: 'normal'
+                        },
+                        series: {
+                          pointWidth: 20,
+                        }
+                      },
+                      legend: {
+                        enabled: false
+                      },
+                      title: {
+                        text: ''
+                      },
+                      xAxis: {
+                        lineColor: "#dfe3e4",
+                        tickColor: "#fff",
+                        categories: [
+                          'Mar',
+                          'Apr',
+                          'May',
+                          'Jun',
+                          'Jul',
+                          'Aug',
+                          'Sep',
+                        ],
+                        labels: {
+                          style: {
+                            color: "#607179",
+                            fontSize: "14px"
+                          }
+                        }
+                      },
+                      yAxis: {
+                        gridLineColor: '#dfe3e4',
+                        title: {
+                          text: ''
+                        },
+                        labels: {
+                          style: {
+                            color: "#607179",
+                            fontSize: "14px"
+                          }
+                        }
+                      },
+                      series: [{
+                        name: 'New Visitors',
+                        data: [5000, 3000, 4000, 7000, 2000, 3000, 8000],
+                        color: '#ffbc00'
+                      }, {
+                        name: 'Returning Visitors',
+                        data: [2000, 2000, 3000, 2000, 1000, 5000, 6000],
+                        color: '#188bf6'
+                      }]
+                    });
+                  </script>
+                </div>
+                <div class="col-xl-4">
+                  <div class="new-visitors">
+                    <h4>$312.224</h4>
+                    <p>New visitors</p>
+                  </div>
+                  <div class="visitor-count-donut">
+                    <div class="visitor-donut-chart" id="visitor-donut-chart"></div>
+                    <h4>500K <span>Visitors</span></h4>
+                    <!-- Visitor Donut Chart Script Sample -->
+                    <script>
+                      Highcharts.chart('visitor-donut-chart', {
+                        chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: 0,
+                          plotShadow: false,
+                          style: {
+                            fontFamily: 'Roboto'
+                          }
+                        },
+                        title: {
+                          text: '',
+                          align: 'center',
+                          verticalAlign: 'middle',
+                          y: 40
+                        },
+                        tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                          pie: {
+                            dataLabels: {
+                              enabled: false,
+                            },
+                          }
+                        },
+                        series: [{
+                          type: 'pie',
+                          name: 'Visitors',
+                          innerSize: '80%',
+                          data: [{
+                            name: 'New Visitors',
+                            y: 40,
+                            color: '#ffbc00'
+                          },
+                          {
+                            name: 'Returning Visitors',
+                            y: 50,
+                            color: '#188bf6'
+                          },
+                          ]
+                        }]
+                      });
+                      
+                    </script>
+                  </div>
+                  <div class="returning-visitors">
+                    <h4>$10.289</h4>
+                    <p>Returning visitors</p>
+                  </div>
+                </div>
+              </div>
+              <div class="website-visitors--set3 row">
+                <div class="col-xl-6">
+                  <h3>Visitors by Age</h3>
+                  <div class="age_stats">
+                    <div class="age_stats-item --green">
+                      <h4>55+</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 45%"></div>
+                        <span>112.554</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="age_stats">
+                    <div class="age_stats-item --blue">
+                      <h4>45-54</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                        <span>161.104</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="age_stats">
+                    <div class="age_stats-item --yellow">
+                      <h4>35-44</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%"></div>
+                        <span>68.105</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="age_stats">
+                    <div class="age_stats-item --orange">
+                      <h4>25-34</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                        <span>98.010</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="age_stats">
+                    <div class="age_stats-item --red">
+                      <h4>18-24</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 10%"></div>
+                        <span>6.910</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="age_stats">
+                    <div class="age_stats-item --purple">
+                      <h4>13-17</h4>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 15%"></div>
+                        <span>54.095</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <h3>Visitors by Gender</h3>
+                  <div class="visitors-gender">
+                    <div class="female-icon">
+                      <i class="icon icon-female"></i>
+                    </div>
+                    <div class="gender-percentages">
+                      <div class="gender-percentages-numbers">
+                        <div class="gender-percentages-numbers-item">
+                          <h4>64%</h4>
+                          <p>329.091</p>
+                        </div>
+                        <div class="gender-percentages-numbers-item">
+                          <h4>36%</h4>
+                          <p>172.021</p>
+                        </div>
+                      </div>
+                      <div class="gender-percentages-progress">
+                        <div class="progress --pink" style="width: 64%">
+                          <div class="progress-bar" role="progressbar"></div>
+                        </div>
+                        <div class="progress --blue" style="width: 36%">
+                          <div class="progress-bar" role="progressbar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="male-icon">
+                      <i class="icon icon-male"></i>
+                    </div>
+                  </div>
+                  <div class="visitors-gender-chart" id="visitors-gender-chart"></div>
+                  <!-- Visitors Gender Chart Script Sample -->
+                  <script type="text/javascript">
+                    Highcharts.chart('visitors-gender-chart', {
+                      chart: {
+                        height: 150,
+                        type: 'column',
+                        style: {
+                          fontFamily: 'Roboto'
+                        }
+                      },
+                      plotOptions: {
+                        column: {
+                          groupPadding: 0.35,
+                          borderWidth: 0
+                        },
+                        series: {
+                          pointWidth: 6,
+                          borderRadius: 5
+                        }
+                      },
+                      legend: {
+                        enabled: false
+                      },
+                      title: {
+                        text: ''
+                      },
+                      xAxis: {
+                        lineColor: "#dfe3e4",
+                        tickColor: "#fff",
+                        categories: [
+                          'Mar',
+                          'Apr',
+                          'May',
+                          'Jun',
+                          'Jul',
+                        ],
+                        labels: {
+                          style: {
+                            color: "#607179",
+                            fontSize: "14px"
+                          }
+                        }
+                      },
+                      yAxis: {
+                        gridLineColor: '#dfe3e4',
+                        title: {
+                          text: ''
+                        },
+                        labels: {
+                          style: {
+                            color: "#607179",
+                            fontSize: "14px"
+                          }
+                        }
+                      },
+                      series: [{
+                        name: 'Male',
+                        type: 'spline',
+                        data: [1500, 2000, 3000, 2500, 1800],
+                        color: '#188bf6'
+                      }, {
+                        name: 'Female',
+                        type: 'spline',
+                        data: [1000, 2500, 2000, 3000, 3500],
+                        color: '#ff3e7f'
+                      }]
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- END of .hl_dashboard -->
+
+    </section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

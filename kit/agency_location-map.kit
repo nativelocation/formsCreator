@@ -1,0 +1,84 @@
+<!-- @import 'partials/head.kit' -->
+
+    <!-- @import 'partials/agency-nav.kit' -->
+
+    <!-- @import 'partials/header.kit' -->
+
+    <section class="hl_wrapper">
+
+      <section class="hl_wrapper--inner hl_agency hl_agency-location--map" id="agency_location">
+        <div class="the-location-map" id="location-map"></div>
+        <div class="hl_location--search">
+          <i class="icon icon-loupe"></i>
+          <a href="#" class="add-manually">Add location manually</a>
+          <input type="text" class="form-control" id="map-search" placeholder="Search">
+          <div class="dropdown">
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">Dr. Benjamin Solomowitz, 9th Street, Brooklyn, New York, USA</li>
+              <li class="dropdown-item">Crystal Clear Dental, 24 Horacio Trail, New York, USA</li>
+              <li class="dropdown-item">Serenity Dental Clinic, 1888 Skinner Hollow Road, New York, USA</li>
+              <li class="dropdown-item">Meta Clinic, 4226 Stratford Park, New York, USA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hl_location--search-results">
+          <div class="search-results-header">
+            <h4>Results <span>(4)</span></h4>
+            <a href="#" class="hide">Hide results</a>
+          </div>
+          <div class="search-results">
+            <a class="search-result-item">
+              <i class="icon icon-pin-filled --blue"></i>
+              <div class="text">
+                <h5>Crystal Clear Dental</h5>
+                <p>24 Horacio Trail, Worcester, MA 01608</p>
+              </div>
+              <i class="icon icon-arrow-right-1"></i>
+            </a>
+            <a class="search-result-item">
+              <i class="icon icon-pin-filled --green"></i>
+              <div class="text">
+                <h5>Meta Clinic</h5>
+                <p>1888 Skinner Hollow Road, Provolt, OR 97530</p>
+              </div>
+              <i class="icon icon-arrow-right-1"></i>
+            </a>
+            <a class="search-result-item">
+              <i class="icon icon-pin-filled --orange"></i>
+              <div class="text">
+                <h5>Serenity Dental Clinic</h5>
+                <p>24 Horacio Trail, Worcester, MA 01608</p>
+              </div>
+              <i class="icon icon-arrow-right-1"></i>
+            </a>
+            <a class="search-result-item">
+              <i class="icon icon-pin-filled --pink"></i>
+              <div class="text">
+                <h5>Meta Clinic</h5>
+                <p>1888 Skinner Hollow Road, Provolt, OR 97530</p>
+              </div>
+              <i class="icon icon-arrow-right-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Maps-->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+        <script type="text/javascript">
+          google.maps.event.addDomListener(window, 'load', init);
+          function init() {
+            var mapOptions = {
+              zoom: 11,
+              disableDefaultUI: true,
+              center: new google.maps.LatLng(40.6700, -73.9400), // New York
+              styles: [{ "featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{ "color": "#f4f4f4" }] }, { "featureType": "landscape.man_made", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape.natural", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#e4e4e4" }] }, { "featureType": "landscape.natural.landcover", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape.natural.landcover", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }] }, { "featureType": "landscape.natural.terrain", "elementType": "geometry.fill", "stylers": [{ "visibility": "off" }, { "hue": "#ff0000" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.attraction", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.business", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.government", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.medical", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.park", "elementType": "all", "stylers": [{ "visibility": "simplified" }, { "gamma": "1" }, { "weight": "0" }] }, { "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [{ "color": "#e4e4e4" }] }, { "featureType": "poi.park", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.park", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.place_of_worship", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.school", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.sports_complex", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "saturation": -100 }, { "lightness": 99 }, { "visibility": "on" }, { "color": "#ffffff" }] }, { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "color": "#808080" }, { "lightness": 54 }] }, { "featureType": "road", "elementType": "labels.text.fill", "stylers": [{ "color": "#a0a0a0" }, { "visibility": "on" }] }, { "featureType": "road", "elementType": "labels.text.stroke", "stylers": [{ "color": "#ffffff" }] }, { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "road.highway", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway.controlled_access", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.local", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "transit.line", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "transit.line", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit.line", "elementType": "labels.text", "stylers": [{ "color": "#ff0000" }, { "visibility": "off" }] }, { "featureType": "transit.line", "elementType": "labels.text.fill", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit.line", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }] }, { "featureType": "transit.line", "elementType": "labels.icon", "stylers": [{ "visibility": "on" }] }, { "featureType": "transit.station", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "transit.station", "elementType": "labels.text", "stylers": [{ "color": "#ff0000" }, { "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "saturation": 43 }, { "lightness": -11 }, { "hue": "#0088ff" }] }]
+            };
+            var mapElement = document.getElementById('location-map');
+            var map = new google.maps.Map(mapElement, mapOptions);
+          }
+        </script>
+      </section><!-- END of .hl_agency-location--map -->
+
+    </section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

@@ -1,0 +1,280 @@
+<!-- @import 'partials/head.kit' -->
+
+    <!-- @import 'partials/nav-shrink.kit' -->
+
+    <!-- @import 'partials/header-shrink.kit' -->
+
+    <section class="hl_wrapper nav-shrink d-flex">
+
+      <section class="hl_wrapper--inner form-builder" id="form-builder">
+        
+        <section class="hl_form-builder--main">
+         
+          <div class="form-builder--wrap" id="the-form-builder">
+            <div class="form-builder--item">
+              <h4>Subscribe for Email Updates</h3>
+            </div>
+            <div class="form-builder--item">
+              <p>Add a descriptive message telling what your visitor is signing up for here.</p>
+            </div>
+            <div class="form-builder--item">
+              <label>Full Name</label>
+              <input type="text" class="form-control" placeholder="Full Name">
+            </div>
+            <div class="form-builder--item">
+              <label>Email*</label>
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-builder--item">
+              <button type="button" class="btn btn-dark">Submit</button>
+            </div>
+          </div>
+
+        </section><!-- END of .hl_form-builder--main -->
+        <aside class="hl_form-builder--sidebar">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="fields-tab" data-toggle="tab" href="#fields" role="tab" aria-controls="fields" aria-selected="true">Fields</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="styles-tab" data-toggle="tab" href="#styles" role="tab" aria-controls="styles" aria-selected="false">Styles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="options-tab" data-toggle="tab" href="#options" role="tab" aria-controls="options" aria-selected="false">Options</a>
+            </li>
+          </ul>
+          <div class="custom-field">
+            <button type="button" class="btn btn-success btn-block">Add Custom Field</button>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane active" id="fields" role="tabpanel" aria-labelledby="fields-tab">
+              <div class="dragdrop-wrap">
+                <ul class="dragdrop-items">
+                  <li class="active"><span>Full Name</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>First Name</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Last Name</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Phone</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Organization</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Header</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>HTML Code</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Image</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>CAPTCHA</span> <i class="icon icon-resize-plus-2"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-pane" id="styles" role="tabpanel" aria-labelledby="styles-tab">
+              <div class="style-wrap">
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Layout</h3>
+                  </div>
+                  <div class="option-card-body">
+                   <div class="d-flex justify-content-between">
+                      <p>Inline Forms</p>
+                      <div class="toggle">
+                        <input type="checkbox" class="tgl tgl-light" id="misc-toggle">
+                        <label class="tgl-btn" for="misc-toggle"></label>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Form Style</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="style-group">
+                      <label>Background</label>
+                      <div class="color-picker">
+                        <span class="hash">#</span>
+                        <input type="text" class="form-control" value="FFFFFF">
+                        <span class="the-color"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Font Color</label>
+                      <div class="color-picker">
+                        <span class="hash">#</span>
+                        <input type="text" class="form-control" value="000000">
+                        <span class="the-color" style="background: #000"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Border</label>
+                      <div class="border-picker">
+                        <input type="text" class="form-control" value="0">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                        <span class="the-color" style="background: #ddd"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Corner Radius</label>
+                      <div class="pixel-count">
+                        <input type="text" class="form-control" value="0">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Width</label>
+                      <div class="pixel-count">
+                        <input type="text" class="form-control" value="550">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Button</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="style-group">
+                      <label>Background</label>
+                      <div class="color-picker">
+                        <span class="hash">#</span>
+                        <input type="text" class="form-control" value="FFFFFF">
+                        <span class="the-color" style="background: #fff"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Text</label>
+                      <div class="color-picker">
+                        <span class="hash">#</span>
+                        <input type="text" class="form-control" value="000000">
+                        <span class="the-color" style="background: #000"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Border</label>
+                      <div class="border-picker">
+                        <input type="text" class="form-control" value="0">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                        <span class="the-color" style="background: #ddd"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Corner Radius</label>
+                      <div class="pixel-count">
+                        <input type="text" class="form-control" value="0">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Padding</label>
+                      <div class="pixel-count">
+                        <input type="text" class="form-control" value="10">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Custom CSS</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="form-group">
+                      <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="form-group d-flex justify-content-end">
+                      <button class="btn btn-primary btn-sm">Inspector</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Miscellaneous</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="d-flex justify-content-between">
+                      <p>AC Branding</p>
+                      <div class="toggle">
+                        <input type="checkbox" class="tgl tgl-light" id="misc-toggle" checked="">
+                        <label class="tgl-btn" for="misc-toggle"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="options" role="tabpanel" aria-labelledby="options-tab">
+              <div class="style-wrap">
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>On Submit</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="form-group">
+                      <select class="selectpicker">
+                        <option>Show Thank You</option>
+                        <option>Open URL</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" rows="4">Thanks for signing up!</textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Form Action</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="form-group">
+                      <input type="text" class="form-control" value="Add a tag">
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-primary btn-block"><i class="icon-plus"></i> Add Action</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Advanced</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="form-group">
+                      <div class="toggle">
+                        <input type="checkbox" class="tgl tgl-light" id="advanced-toggle" checked="">
+                        <label class="tgl-btn" for="advanced-toggle"></label>
+                      </div>
+                    </div>
+                    <p>Allow blank fields to overwrite existing field data. <a href="#" class="hl_tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Some text goes here.">?</a></p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </aside><!-- END of .hl_form-builder--sidebar -->
+
+      </section><!-- END of .form-builder -->
+
+    </section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

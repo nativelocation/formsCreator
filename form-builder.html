@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HighLevel</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="format-detection" content="telephone=no">
+  <!--Main Styles (compiled & minified by GulpJS)-->
+  <link rel="stylesheet" type="text/css" href="./css/styles.min.css">
+  <!-- Dependency Scripts (jQuery v3.1.1 & Bootstrap v4 beta 3) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- Plugins & Custom Scripts (concatenated and minified by GulpJS) -->
+  <script src="./js/scripts.min.js"></script>
+  <!-- HighChart Scripts -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/funnel.js"></script>
+  <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+  <!-- FullCalendar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+  <!-- FontAwesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+  <!--Favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+  <link rel="manifest" href="./favicons/site.webmanifest">
+  <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#777777">
+  <link rel="shortcut icon" href="./favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+  <nav class="hl_navbar shrink" id="navbar">
+    <div class="hl_navbar--inner">
+      <a href="./" class="hl_navbar--logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26">
+          <image width="28" height="26" xlink:href="data:img/png;base64,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"
+          />
+        </svg>
+      </a>
+      <button class="hl_navbar--toggler" type="button" id="navbar-toggler">
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+      </button>
+      <div class="hl_navbar--collapse" id="navbar-collapse">
+        <button class="hl_navbar--button btn btn-success btn-block" data-toggle="modal" data-target="#client-checkin--modal">Check In Client</button>
+        <ul class="hl_navbar--links list-unstyled" id="nav-links">
+          <li id="nav-dashboard">
+            <a href="./" data-tooltip="nav-tooltip" data-placement="right" title="Dashboard">
+              <i class="icon-duplicate"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li id="nav-widgets">
+            <a href="./widgets.html" data-tooltip="nav-tooltip" data-placement="right" title="Widgets">
+              <i class="icon-tiles-filled"></i>
+              <span>Widgets</span>
+            </a>
+          </li>
+          <li id="nav-marketing">
+            <a data-toggle="collapse" href="#nav-marketing-collapse" role="button" aria-expanded="false" aria-controls="nav-marketing-collapse" data-tooltip="nav-tooltip" data-placement="right" title="Marketing">
+              <i class="icon-mail"></i>
+              <span>Marketing</span>
+              <i class="caret icon-arrow-down-1"></i>
+            </a>
+            <div class="collapse nav-dropdown-links" id="nav-marketing-collapse">
+              <ul>
+                <li class="active">
+                  <a href="./customer-acquisition.html">Customer Acquisition</a>
+                </li>
+                <li>
+                  <a href="./triggers.html">Triggers</a>
+                </li>
+                <li>
+                  <a href="./workflow.html">Workflow</a>
+                </li>
+                <li>
+                  <a href="./form-builder.html">Form Builder</a>
+                </li>
+                <li>
+                  <a href="#">Product Adoption</a>
+                </li>
+                <li>
+                  <a href="#">Product Upsell</a>
+                </li>
+                <li>
+                  <a href="#">Content Library</a>
+                </li>
+                <li>
+                  <a href="#">Snapshot Widget</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li id="nav-reviews">
+            <a href="./reviews.html" data-tooltip="nav-tooltip" data-placement="right" title="Reviews">
+              <i class="icon-bubble-filled"></i>
+              <span>Reviews</span>
+            </a>
+          </li>
+          <li id="nav-customers">
+            <a data-toggle="collapse" href="#nav-customer-collapse" role="button" aria-expanded="false" aria-controls="nav-customer-collapse" data-tooltip="nav-tooltip" data-placement="right" title="Customers">
+              <i class="icon-user"></i>
+              <span>Customers</span>
+              <i class="caret icon-arrow-down-1"></i>
+            </a>
+            <div class="collapse nav-dropdown-links" id="nav-customer-collapse">
+              <ul>
+                <li class="active">
+                  <a href="./contact-details.html">Contact Details</a>
+                </li>
+                <li>
+                  <a href="./customers.html">Customers</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li id="nav-team">
+            <a href="./team.html" data-tooltip="nav-tooltip" data-placement="right" title="Team">
+              <i class="icon-heart"></i>
+              <span>Team</span>
+            </a>
+          </li>
+          <li id="nav-online-analysis">
+            <a href="./online-analysis.html" data-tooltip="nav-tooltip" data-placement="right" title="Online Analysis">
+              <i class="icon-pulse"></i>
+              <span>Online Analysis</span>
+            </a>
+          </li>
+          <li id="nav-opportunities">
+            <a href="./opportunities.html" data-tooltip="nav-tooltip" data-placement="right" title="Opportunities">
+              <i class="icon-blocks"></i>
+              <span>Opportunities</span>
+            </a>
+          </li>
+          <li id="nav-conversations">
+            <a href="./conversations.html" data-tooltip="nav-tooltip" data-placement="right" title="Conversations">
+              <i class="icon-bubble"></i>
+              <span>Conversations</span>
+            </a>
+          </li>
+          <li id="nav-calendar">
+            <a href="./calendar.html" data-tooltip="nav-tooltip" data-placement="right" title="Calendar">
+              <i class="icon-calendar"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+          <li id="nav-settings">
+            <a href="./settings-profile.html" data-tooltip="nav-tooltip" data-placement="right" title="Settings">
+              <i class="icon-settings-1"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li id="nav-social">
+            <a href="./social.html" data-tooltip="nav-tooltip" data-placement="right" title="Social Media">
+              <i class="icon-target-2"></i>
+              <span>Social Media</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END of .hl_navbar -->
+
+  <!-- Client Check In Modal -->
+  <div class="modal fade" id="client-checkin--modal" tabindex="-1" role="dialog" aria-labelledby="client-checkin--modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-header--inner">
+            <h5 class="modal-title" id="client-checkin--modalLabel"><i class="icon icon-user --green"></i> Client Check In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-body--inner">
+            <div class="form-group">
+              <label>Customer Phone or Email:</label>
+              <input type="text" class="form-control" placeholder="Customer Phone or Email">
+            </div>
+            <div class="form-group">
+              <label>Customer Name:</label>
+              <input type="text" class="form-control" placeholder="Customer Name">
+            </div>
+            <div class="modal-buttons d-flex align-items-center justify-content-between">
+              <button type="button" class="btn btn-link">Send to Multiple Clients</button>
+              <button type="button" class="btn btn-success">Send a Review Invite</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="hl_header nav-shrink">
+    <div class="hl_call-bar --in">
+      <div class="call-type">
+        <i class="icon icon-arrow-up-2"></i>
+        <p>In</p>
+      </div>
+      <div class="hl_call-bar--inner">
+        <div class="caller-id">
+          <h4>Shaun Clark</h4>
+          <p>HighLevel Company</p>
+        </div>
+        <div class="call-buttons">
+          <button type="button" class="btn btn-circle"><i class="icon icon-mic-off"></i>
+          </button>
+          <button type="button" class="btn btn-circle btn-arrows"><i class="icon icon-arrows-up-down"></i>
+          </button>
+          <div class="call-dial dropdown --no-caret">
+            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="icon icon-dots"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dial-numbers">
+                <div class="dial-item">
+                  <a href="#" class="number">1</a>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">2</a>
+                  <span class="letters">ABC</span>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">3</a>
+                  <span class="letters">DEF</span>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">4</a>
+                  <span class="letters">GHI</span>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">5</a>
+                  <span class="letters">JKL</span>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">6</a>
+                  <span class="letters">MNO</span>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">7</a>
+                  <span class="letters">PQRS</span>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">8</a>
+                  <span class="letters">TUV</span>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">9</a>
+                  <span class="letters">WXYZ</span>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">*</a>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">0</a>
+                </div>
+                <div class="dial-item">
+                  <a href="#" class="number">#</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="call-actions">
+        <p class="call-time">00:00:14</p>
+        <button type="button" class="btn btn-circle-sm btn-danger btn-call"><i class="fas fa-phone"></i>
+        </button>
+        <button type="button" class="btn btn-info btn-xs btn-next-lead">Call next Lead <i class="icon icon-arrow-right-2"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- END of .hl_header -->
+
+  <div class="hl_recent-activities">
+    <div class="hl_recent-activities--inner">
+      <ul class="hl_recent-activities--list list-unstyled">
+        <li class="hl_recent-activities--item --notification">
+          <div class="avatar --sm">
+            <div class="avatar_img --blue">
+              BM
+            </div>
+          </div>
+          <p><strong>Bruce Mann</strong> sent a Review Request to  Amanda Nunes. </p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item --notification">
+          <div class="avatar --sm">
+            <div class="avatar_img">
+              <img src="./img/img-avatar-sample4.png" alt="Avatar Name">
+            </div>
+          </div>
+          <p><strong>Henry J.</strong> sent a Review Request to  Amanda Nunes. </p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item --notification">
+          <span class="recent-activities--icon --rating">
+          <i class="icon icon-star-filled"></i>
+        </span>
+          <p>Our Average Rating went up! </p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item">
+          <span class="recent-activities--icon --reviews">
+          <i class="icon icon-send"></i>
+        </span>
+          <p>Milestone of 5,000 team Review Requestes hit! </p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item">
+          <div class="avatar --sm">
+            <div class="avatar_img --orange">
+              GT
+            </div>
+          </div>
+          <p><strong>Gerald Terry</strong> sent a Review Request to  Amanda Nunes. </p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item">
+          <div class="avatar --sm">
+            <div class="avatar_img --green">
+              RF
+            </div>
+          </div>
+          <p><strong>Ricardo Foster</strong> sent a Review Request to  Amanda Nunes. </p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item">
+          <div class="avatar --sm">
+            <div class="avatar_img">
+              <img src="./img/img-avatar-sample2.png" alt="Avatar Name">
+            </div>
+          </div>
+          <p><strong>Samantha Irving</strong> sent a Review Request to  Amanda Nunes.</p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item">
+          <div class="avatar --sm">
+            <div class="avatar_img">
+              <img src="./img/img-avatar-sample3.png" alt="Avatar Name">
+            </div>
+          </div>
+          <p><strong>Cecelia Atkins</strong> sent a Review Request to  Amanda Nunes. </p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item">
+          <div class="avatar --sm">
+            <div class="avatar_img --purple">
+              NP
+            </div>
+          </div>
+          <p><strong>Norman E. Parque</strong> sent a Review Request to  Amanda Nunes. </p>
+          <p class="location">Nike Store, 49 Garnet Stream, Baja, CA</p>
+          <p class="time-date">10 min ago</p>
+        </li>
+        <li class="hl_recent-activities--item">
+          <a href="#">Load More</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- END of .recent_activities -->
+
+  <div class="modal review-link--modal" tabindex="-1" role="dialog" id="review-link--modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+          <img src="./img/img-link-review-copied.png">
+          <h4>Link copied to clipboard!</h4>
+          <p>www.somekindoflink.com/mycompanyname/213213</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="hl_wrapper nav-shrink d-flex">
+
+    <section class="hl_wrapper--inner form-builder" id="form-builder">
+
+      <section class="hl_form-builder--main">
+
+        <div class="form-builder--wrap" id="the-form-builder">
+          <div class="form-builder--item">
+            <h4>Subscribe for Email Updates</h3>
+            </div>
+            <div class="form-builder--item">
+              <p>Add a descriptive message telling what your visitor is signing up for here.</p>
+            </div>
+            <div class="form-builder--item">
+              <label>Full Name</label>
+              <input type="text" class="form-control" placeholder="Full Name">
+            </div>
+            <div class="form-builder--item">
+              <label>Email*</label>
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-builder--item">
+              <button type="button" class="btn btn-dark">Submit</button>
+            </div>
+          </div>
+
+        </section><!-- END of .hl_form-builder--main -->
+        <aside class="hl_form-builder--sidebar">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="fields-tab" data-toggle="tab" href="#fields" role="tab" aria-controls="fields" aria-selected="true">Fields</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="styles-tab" data-toggle="tab" href="#styles" role="tab" aria-controls="styles" aria-selected="false">Styles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="options-tab" data-toggle="tab" href="#options" role="tab" aria-controls="options" aria-selected="false">Options</a>
+            </li>
+          </ul>
+          <div class="custom-field">
+            <button type="button" class="btn btn-success btn-block">Add Custom Field</button>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane active" id="fields" role="tabpanel" aria-labelledby="fields-tab">
+              <div class="dragdrop-wrap">
+                <ul class="dragdrop-items">
+                  <li class="active"><span>Full Name</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>First Name</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Last Name</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Phone</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Organization</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Header</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>HTML Code</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>Image</span> <i class="icon icon-resize-plus-2"></i></li>
+                  <li><span>CAPTCHA</span> <i class="icon icon-resize-plus-2"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-pane" id="styles" role="tabpanel" aria-labelledby="styles-tab">
+              <div class="style-wrap">
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Layout</h3>
+                  </div>
+                  <div class="option-card-body">
+                   <div class="d-flex justify-content-between">
+                      <p>Inline Forms</p>
+                      <div class="toggle">
+                        <input type="checkbox" class="tgl tgl-light" id="misc-toggle">
+                        <label class="tgl-btn" for="misc-toggle"></label>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Form Style</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="style-group">
+                      <label>Background</label>
+                      <div class="color-picker">
+                        <span class="hash">#</span>
+                        <input type="text" class="form-control" value="FFFFFF">
+                        <span class="the-color"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Font Color</label>
+                      <div class="color-picker">
+                        <span class="hash">#</span>
+                        <input type="text" class="form-control" value="000000">
+                        <span class="the-color" style="background: #000"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Border</label>
+                      <div class="border-picker">
+                        <input type="text" class="form-control" value="0">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                        <span class="the-color" style="background: #ddd"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Corner Radius</label>
+                      <div class="pixel-count">
+                        <input type="text" class="form-control" value="0">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Width</label>
+                      <div class="pixel-count">
+                        <input type="text" class="form-control" value="550">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Button</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="style-group">
+                      <label>Background</label>
+                      <div class="color-picker">
+                        <span class="hash">#</span>
+                        <input type="text" class="form-control" value="FFFFFF">
+                        <span class="the-color" style="background: #fff"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Text</label>
+                      <div class="color-picker">
+                        <span class="hash">#</span>
+                        <input type="text" class="form-control" value="000000">
+                        <span class="the-color" style="background: #000"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Border</label>
+                      <div class="border-picker">
+                        <input type="text" class="form-control" value="0">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                        <span class="the-color" style="background: #ddd"></span>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Corner Radius</label>
+                      <div class="pixel-count">
+                        <input type="text" class="form-control" value="0">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="style-group">
+                      <label>Padding</label>
+                      <div class="pixel-count">
+                        <input type="text" class="form-control" value="10">
+                        <span class="px">px</span>
+                        <div class="pixel-count-btns">
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Custom CSS</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="form-group">
+                      <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="form-group d-flex justify-content-end">
+                      <button class="btn btn-primary btn-sm">Inspector</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Miscellaneous</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="d-flex justify-content-between">
+                      <p>AC Branding</p>
+                      <div class="toggle">
+                        <input type="checkbox" class="tgl tgl-light" id="misc-toggle" checked="">
+                        <label class="tgl-btn" for="misc-toggle"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="options" role="tabpanel" aria-labelledby="options-tab">
+              <div class="style-wrap">
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>On Submit</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="form-group">
+                      <select class="selectpicker">
+                        <option>Show Thank You</option>
+                        <option>Open URL</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" rows="4">Thanks for signing up!</textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Form Action</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="form-group">
+                      <input type="text" class="form-control" value="Add a tag">
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-primary btn-block"><i class="icon-plus"></i> Add Action</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="option-card">
+                  <div class="option-card-header">
+                    <h3>Advanced</h3>
+                  </div>
+                  <div class="option-card-body">
+                    <div class="form-group">
+                      <div class="toggle">
+                        <input type="checkbox" class="tgl tgl-light" id="advanced-toggle" checked="">
+                        <label class="tgl-btn" for="advanced-toggle"></label>
+                      </div>
+                    </div>
+                    <p>Allow blank fields to overwrite existing field data. <a href="#" class="hl_tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Some text goes here.">?</a></p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </aside><!-- END of .hl_form-builder--sidebar -->
+
+      </section><!-- END of .form-builder -->
+
+    </section><!-- END of .hl_wrapper -->
+
+    <!-- ======================= Outdated Browser (Supports IE10 & Above) ======================= -->
+    <div id="outdated" aria-hidden="true">
+      <h5>:(</h5>
+      <h6>Your browser is out-of-date!</h6>
+      <p>This website is built using latest technologies. Unfortunately your browser doesn't support those. Please update your browser to view this website correctly. Thank you.<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank">Update my browser now </a></p>
+    </div>
+    <!-- ================================= END: Outdated Browser ================================ -->
+  </body>
+</html>

@@ -1,0 +1,482 @@
+<!-- @import 'partials/head2.kit' -->
+
+    <!-- @import 'partials/nav.kit' -->
+
+    <!-- @import 'partials/header.kit' -->
+
+    <section class="hl_wrapper">
+
+      <section class="hl_marketing--inner hl_wrapper--inner hl_marketing" id="marketing">
+
+        <div class="hl_marketing--header">
+          <div class="container-fluid">
+            <div class="hl_marketing--header-inner">
+              <h2>Sample Campaign <i class="icon icon-pencil"></i></h2>
+              <div class="hl_marketing--header-btns">
+                <div class="dropdown">
+                  <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</button>
+                  <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">option 1</a>
+                    <a href="#" class="dropdown-item">option 2</a>
+                    <a href="#" class="dropdown-item">option 3</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+
+          <div class="hl_controls">
+            <div class="hl_controls--left">
+              <select class="selectpicker" data-width="fit">
+                <option>Acquire</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+              <span class="status --published">Published</span>
+            </div>
+            <div class="hl_controls--right">
+              <select class="selectpicker --white" data-width="fit">
+                <option>All Market</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+              <div class="form-group form-date">
+                <input type="text" class="form-control form-light" placeholder="Select Date Range">
+                <i class="icon icon-calendar"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="hl_create-campaign">
+
+            <div class="card-group">
+              <div class="card card-campaign-status">
+                <div class="card-header">
+                  <h2>Campaign Status by Recipients</h2>
+                </div>
+                <div class="card-body">
+                  <div class="campaign-status">
+                    <div class="campaign-status-left">
+                      <div class="campaign-status-top">
+                        <div class="stat-item">
+                          <h3>3</h3>
+                          <p>Accounts</p>
+                        </div>
+                      </div>
+                      <div class="campaign-status-bottom">
+                        <div class="stat-item">
+                          <h3>3</h3>
+                          <p>Recipients</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="campaign-status-right">
+                      <div class="item">
+                        <h4>0% <span>(0)</span></h4>
+                        <p>Buferring</p>
+                      </div>
+                      <div class="item">
+                        <h4>0% <span>(0)</span></h4>
+                        <p>In Progress</p>
+                      </div>
+                      <div class="item">
+                        <h4>33.3% <span>(1)</span></h4>
+                        <p>Stopped</p>
+                      </div>
+                      <div class="item">
+                        <h4>66.7% <span>(2)</span></h4>
+                        <p>Completed</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-email-performance">
+                <div class="card-header">
+                  <h2>Email Performance by Account</h2>
+                </div>
+                <div class="card-body">
+                  <div class="email-performance">
+                    <div class="email-performance-left">
+                      <div class="email-performance-top">
+                        <div class="stat-item">
+                          <h3><i class="icon icon-sun"></i> 4</h3>
+                          <p>Total Leads</p>
+                        </div>
+                      </div>
+                      <div class="email-performance-bottom">
+                        <a href="#" class="btn btn-blue btn-block">See Hot Leads</a>
+                      </div>
+                    </div>
+                    <div class="email-performance-right">
+                      <div class="item">
+                        <h4>100% <span>(6)</span></h4>
+                        <p>Delivery Rate</p>
+                      </div>
+                      <div class="item">
+                        <h4>50% <span>(3)</span></h4>
+                        <p>Open Rate</p>
+                      </div>
+                      <div class="item">
+                        <h4>33.3% <span>(1)</span></h4>
+                        <p>CTR</p>
+                      </div>
+                      <div class="item">
+                        <h4>0% <span>(0)</span></h4>
+                        <p>Undeliverable</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-collapsing">
+              <a data-toggle="collapse" href="#campaignconfiguration" role="button" aria-expanded="false" class="collapsed">
+                <div class="card-header">
+                  <h2><div><i class="icon icon-arrow-right-1"></i> Campaign Configuration</div></h2>
+                </div>
+              </a>
+              <div class="collapse" id="campaignconfiguration">
+                <div class="card-body">
+                  <div class="hl_campaign-configuration">
+                    <div class="alert --yellow" role="alert">
+                      Campaign Configuration affects all markets. Ensure that you have to make changes to these settings.
+                    </div>
+                    <div class="scheduling">
+                      <h3>Scheduling</h3>
+                      <hr>
+                      <div class="form-group">
+                        <label>Select Time Zone</label>
+                        <div class="form-group-controls">
+                          <select class="selectpicker" data-width="fit">
+                            <option>UTC</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                          </select>
+                          <p>This setting will affect the time that your content will be sent.</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Included Days</label>
+                        <div class="form-group-controls">
+                          <div class="week-select">
+                            <div class="week-select-day">
+                              <input type="checkbox" id="mon" checked>
+                              <label for="mon">Mon</label>
+                            </div>
+                            <div class="week-select-day">
+                              <input type="checkbox" id="tue" checked>
+                              <label for="tue">Tue</label>
+                            </div>
+                            <div class="week-select-day">
+                              <input type="checkbox" id="wed" checked>
+                              <label for="wed">Wed</label>
+                            </div>
+                            <div class="week-select-day">
+                              <input type="checkbox" id="thu">
+                              <label for="thu">Thu</label>
+                            </div>
+                            <div class="week-select-day">
+                              <input type="checkbox" id="fri">
+                              <label for="fri">Fri</label>
+                            </div>
+                            <div class="week-select-day">
+                              <input type="checkbox" id="sat">
+                              <label for="sat">Sat</label>
+                            </div>
+                            <div class="week-select-day">
+                              <input type="checkbox" id="sun">
+                              <label for="sun">Sun</label>
+                            </div>
+                          </div>
+                          <p>Emails will be sent on Monday, Tuesday, Wednesday, Thursday, Friday.</p>
+                          <p>Emails will not be sent on Saturday, Sunday.</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Account Buffer</label>
+                        <div class="form-group-controls">
+                          <div class="toggle">
+                            <input type="checkbox" class="tgl tgl-light" id="account-buffer-tgl">
+                            <label class="tgl-btn" for="account-buffer-tgl"></label>
+                          </div>
+                          <p>There is no limit to the number of recipients added to this campaign each day (from a list).</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="btn btn-blue">Save</a>
+                  <a href="#" class="btn btn-primary">Cancel</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-collapsing">
+              <a data-toggle="collapse" href="#automations" role="button" aria-expanded="false" class="collapsed">
+                <div class="card-header">
+                  <h2>
+                    <div><i class="icon icon-arrow-right-1"></i> Automations</div>
+                  </h2>
+                </div>
+              </a>
+              <div class="collapse" id="automations">
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quaerat pariatur consequatur rerum neque a, id, nam nostrum iure accusantium magnam nemo perferendis eveniet quos perspiciatis molestiae explicabo reprehenderit nesciunt recusandae, quod distinctio vero et quia omnis? Corporis omnis, ipsa in, quae iste libero minus, voluptatem perferendis molestiae consectetur nam odio eligendi enim consequuntur! Quis ratione iure modi eos quaerat facere molestiae. Quaerat voluptatibus distinctio sed nisi aliquam, laboriosam laudantium fugiat dolores. Corporis suscipit modi corrupti. Delectus assumenda perspiciatis asperiores porro ipsam quaerat nesciunt provident sit non distinctio veritatis tempora omnis fugit dicta minima nisi aliquam ducimus rem, nobis cum.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <div class="new-event-day-item">
+                  <div class="calendar-day">
+                    <div class="calendar-day-inner">
+                      <h5>Day</h5>
+                      <p>1</p>
+                    </div>
+                  </div>
+                  <div class="event-card">
+                    <div class="event-card--top">
+                      <div class="event-card--title">
+                        <i class="icon icon-mail"></i>
+                        <div class="title">
+                          <h5>10X Email 1 (Reviews)</h5>
+                          <p>Ensure data is no older than 30 days</p>
+                        </div>
+                      </div>
+                      <div class="event-card-data">
+                        <h5 class="--green">2</h5>
+                        <p><a href="./campaign-activity.html">Delivered</a></p>
+                      </div>
+                      <div class="event-card-data">
+                        <h5 class="--blue">0</h5>
+                        <p>Pending</p>
+                      </div>
+                      <div class="event-card-data">
+                        <h5>50%</h5>
+                        <p>Open Rate</p>
+                      </div>
+                      <div class="event-card-data">
+                        <h5>N/A</h5>
+                        <p>Click Through Rate</p>
+                      </div>
+                    </div>
+                    <div class="collapse" id="card-more-info1">
+                      <div class="more-info">
+                        <div class="more-info-data">
+                          <h5>0</h5>
+                          <p class="--grey">Up Next</p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5>1</h5>
+                          <p><a href="./campaign-activity.html">Opened</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5>0</h5>
+                          <p><a href="./campaign-activity.html">Clicked Through</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5 class="--yellow">0</h5>
+                          <p><a href="./campaign-activity.html">Bounced</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5 class="--red">0</h5>
+                          <p><a href="./campaign-activity.html">Spam Report</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5 class="--red">0</h5>
+                          <p><a href="./campaign-activity.html">Unsubscribed</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5 class="--grey">0</h5>
+                          <p><a href="./campaign-activity.html">Dropped</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="progress --green">
+                      <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                    </div>
+                    <div class="event-card--bottom">
+                      <ul class="actions">
+                        <li><a href="#" data-toggle="modal" data-target="#edit-event-modal">Edit</a></li>
+                        <li><a href="#">Preview</a></li>
+                      </ul>
+                      <a data-toggle="collapse" href="#card-more-info1" role="button" aria-expanded="false" aria-controls="card-more-info1">More Details</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="new-event-day-item">
+                  <div class="calendar-day">
+                    <div class="calendar-day-inner">
+                      <h5>Day</h5>
+                      <p>2</p>
+                    </div>
+                  </div>
+                  <div class="event-card">
+                    <div class="event-card--top">
+                      <div class="event-card--title">
+                        <i class="icon icon-mail"></i>
+                        <div class="title">
+                          <h5>10X Email 2 (Reviews)</h5>
+                          <p>Ensure data is no older than 30 days</p>
+                        </div>
+                      </div>
+                      <div class="event-card-data">
+                        <h5 class="--green">2</h5>
+                        <p><a href="./campaign-activity.html">Delivered</a></p>
+                      </div>
+                      <div class="event-card-data">
+                        <h5 class="--blue">0</h5>
+                        <p>Pending</p>
+                      </div>
+                      <div class="event-card-data">
+                        <h5>50%</h5>
+                        <p>Open Rate</p>
+                      </div>
+                      <div class="event-card-data">
+                        <h5>N/A</h5>
+                        <p>Click Through Rate</p>
+                      </div>
+                    </div>
+                    <div class="collapse" id="card-more-info2">
+                      <div class="more-info">
+                        <div class="more-info-data">
+                          <h5>0</h5>
+                          <p class="--grey">Up Next</p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5>1</h5>
+                          <p><a href="./campaign-activity.html">Opened</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5>0</h5>
+                          <p><a href="./campaign-activity.html">Clicked Through</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5 class="--yellow">0</h5>
+                          <p><a href="./campaign-activity.html">Bounced</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5 class="--red">0</h5>
+                          <p><a href="./campaign-activity.html">Spam Report</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5 class="--red">0</h5>
+                          <p><a href="./campaign-activity.html">Unsubscribed</a></p>
+                        </div>
+                        <div class="more-info-data">
+                          <h5 class="--grey">0</h5>
+                          <p><a href="./campaign-activity.html">Dropped</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="progress --green">
+                      <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                    </div>
+                    <div class="event-card--bottom">
+                      <ul class="actions">
+                        <li><a href="#" data-toggle="modal" data-target="#edit-event-modal">Edit</a></li>
+                        <li><a href="#">Preview</a></li>
+                      </ul>
+                      <a data-toggle="collapse" href="#card-more-info2" role="button" aria-expanded="false" aria-controls="card-more-info2">More Details</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="new-event-day-item --add-new">
+                  <a href="#" class="add-new-event-btn"><i class="icon icon-plus"></i><span>Add Event</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Edit Event Modal -->
+            <div class="modal fade hl_edit-event-modal" id="edit-event-modal" tabindex="-1" role="dialog">
+              <div class="modal-dialog --mid" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-body">
+                    <div class="modal-body-inner">
+                      <div class="hl_edit-event-modal-wrap">
+                        <div class="hl_edit-event-modal-main">
+                          <div class="card">
+                            <div class="card-header --no-right-padding">
+                              <h2>Compose New Email</h2>
+                            </div>
+                            <div class="card-body">
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="To">
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="From">
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Tittle">
+                              </div>
+                              <div class="compose-controls">
+                                <div class="compose-controls-left">
+                                  <a href="#"><i class="fas fa-bold"></i></a>
+                                  <a href="#"><i class="fas fa-italic"></i></a>
+                                  <a href="#"><i class="fas fa-underline"></i></a>
+                                  <a href="#"><i class="fas fa-link"></i></a>
+                                  <a href="#"><i class="fas fa-list"></i></a>
+                                </div>
+                                <div class="compose-controls-right">
+                                  <select class="selectpicker" data-width="fit">
+                                    <option>Templates</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <textarea class="form-control" rows="6" placeholder="Message"></textarea>
+                            </div>
+                            <div class="card-footer">
+                              <div class="modal-footer-left">
+                                <a href="#"><i class="fas fa-paperclip"></i> Attach File</a>
+                              </div>
+                              <div class="modal-footer-right">
+                                <div class="dropdown">
+                                  <button class="btn btn-link2 dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Schedule
+                                  </button>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Schedule Manually</a>
+                                    <a class="dropdown-item" href="#">Schedule Send</a>
+                                  </div>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-blue" data-dismiss="modal">Send Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="hl_edit-event-modal-preview">
+                          <div class="hl_edit-event-modal-preview-inner">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- END of .hl_marketing -->
+
+    </section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->

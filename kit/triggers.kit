@@ -1,0 +1,144 @@
+<!-- @import 'partials/head.kit' -->
+
+    <!-- @import 'partials/nav.kit' -->
+
+    <!-- @import 'partials/header.kit' -->
+
+    <section class="hl_wrapper">
+
+      <section class="hl_wrapper--inner triggers" id="triggers">
+        <div class="container-fluid">
+
+          <div class="hl_controls">
+            <div class="hl_controls--left flex">
+              <h3>Triggers</h3>
+              <div class="triggers-results">
+                <p>Showing </p>
+                <select class="selectpicker" data-width="fit">
+                  <option>All</option>
+                  <option>Draft</option>
+                  <option>Active</option>
+                  <option>Paused</option>
+                </select>
+                <p>Rules sorted by </p>
+                <select class="selectpicker" data-width="fit">
+                  <option>Most Recent</option>
+                  <option>Oldest</option>
+                  <option>A-Z</option>
+                  <option>Z-A</option>
+                  <option data-divider="true"></option>
+                  <option>Customer Order</option>
+                </select>
+              </div>
+            </div>
+            <div class="hl_controls--right">
+              <div class="search-form">
+                <i class="icon icon-loupe"></i>
+                <input type="text" class="form-control form-light" placeholder="Search Rules">
+              </div>
+              <a href="#" class="btn btn-success"><i class="icon icon-plus"></i> New Basic Rule</a>
+            </div>
+          </div>
+
+          <div class="hl_triggers--wrap">
+            <div class="hl_triggers--control">
+              <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Group: <strong>Everything</strong>
+                </button>
+                <div class="dropdown-menu">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search Groups">
+                  </div>
+                  <p><a href="#" class="active">Everything</a></p>
+                  <p><a href="#">Test Group</a></p>
+                  <p><a href="#" class="btn btn-light2">Manage Groups</a></p>
+                </div>
+              </div>
+            </div>
+            <ul class="hl_triggers--items">
+              <li class="hl_triggers--item">
+                <div class="triggers_name">
+                  <a href="./rules.html"><h4>Rule #1</h4></a>
+                </div>
+                <div class="triggers_actions">
+                  <div class="dropdown">
+                    <button class="btn btn-light4 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Draft
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Activate</a>
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Duplicate</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="hl_triggers--item">
+                <div class="triggers_name">
+                  <a href="./rules.html"><h4>Rule #2</h4></a>
+                </div>
+                <div class="triggers_actions">
+                  <div class="dropdown">
+                    <button class="btn btn-light4 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Draft
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Activate</a>
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Duplicate</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="hl_triggers--item">
+                <div class="triggers_name">
+                  <a href="./rules.html"><h4>Rule #3</h4></a>
+                </div>
+                <div class="triggers_actions">
+                  <div class="dropdown">
+                    <button class="btn btn-light4 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Draft
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Activate</a>
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Duplicate</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </section><!-- END of .triggers -->
+
+    </section><!-- END of .hl_wrapper -->
+
+<!-- @import 'partials/foot.kit' -->
