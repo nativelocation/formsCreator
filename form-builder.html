@@ -408,22 +408,26 @@
         <div class="form-builder--wrap" id="the-form-builder">
           <div class="form-builder--item">
             <h4>Subscribe for Email Updates</h3>
-            </div>
-            <div class="form-builder--item">
-              <p>Add a descriptive message telling what your visitor is signing up for here.</p>
-            </div>
-            <div class="form-builder--item">
-              <label>Full Name</label>
-              <input type="text" class="form-control" placeholder="Full Name">
-            </div>
-            <div class="form-builder--item">
-              <label>Email*</label>
-              <input type="email" class="form-control" placeholder="Email">
-            </div>
-            <div class="form-builder--item">
-              <button type="button" class="btn btn-dark">Submit</button>
-            </div>
           </div>
+          <div class="_clear-element"></div>
+          <div class="form-builder--item">
+            <p>Add a descriptive message telling what your visitor is signing up for here.</p>
+          </div>
+          <div class="_clear-element"></div>
+          <div class="form-builder--item">
+            <label>Full Name</label>
+            <input type="text" class="form-control" placeholder="Full Name">
+          </div>
+          <div class="form-builder--item">
+            <label>Email*</label>
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="_clear-element"></div>
+          <div class="form-builder--item">
+            <button type="button" class="btn btn-dark">Submit</button>
+          </div>
+          <div class="_clear-element"></div>
+        </div>
 
         </section><!-- END of .hl_form-builder--main -->
         <aside class="hl_form-builder--sidebar">
@@ -494,7 +498,7 @@
                    <div class="d-flex justify-content-between">
                       <p>Inline Forms</p>
                       <div class="toggle">
-                        <input type="checkbox" class="tgl tgl-light" id="misc-toggle">
+                        <input type="checkbox" class="tgl tgl-light" id="misc-toggle" onchange="onLayoutChange(event);">
                         <label class="tgl-btn" for="misc-toggle"></label>
                       </div>
                     </div>
@@ -508,51 +512,51 @@
                   <div class="option-card-body">
                     <div class="style-group">
                       <label>Background</label>
-                      <div class="color-picker">
+                      <div class="background color-picker">
                         <span class="hash">#</span>
-                        <input type="text" class="form-control" value="FFFFFF">
-                        <span class="the-color"></span>
+                        <input type="text" class="form-control" value="FFFFFF" oninput="onBackgroundColorPickerInput(event)">
+                        <span class="the-color" style="background: #fff"></span>
                       </div>
                     </div>
                     <div class="style-group">
                       <label>Font Color</label>
-                      <div class="color-picker">
+                      <div class="font color-picker">
                         <span class="hash">#</span>
-                        <input type="text" class="form-control" value="000000">
+                        <input type="text" class="form-control" value="000000" oninput="onFontColorPickerInput(event)">
                         <span class="the-color" style="background: #000"></span>
                       </div>
                     </div>
                     <div class="style-group">
                       <label>Border</label>
                       <div class="border-picker">
-                        <input type="text" class="form-control" value="0">
+                        <input type="text" class="form-control" value="0" oninput="onBorderWidthInput(event)">
                         <span class="px">px</span>
                         <div class="pixel-count-btns">
-                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
-                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1" onclick="onBorderPickerUp(event)"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1" onclick="onBorderPickerDown(event)"></i></button>
                         </div>
                         <span class="the-color" style="background: #ddd"></span>
                       </div>
                     </div>
                     <div class="style-group">
                       <label>Corner Radius</label>
-                      <div class="pixel-count">
-                        <input type="text" class="form-control" value="0">
+                      <div class="corner-radius pixel-count">
+                        <input type="text" class="form-control" value="0" oninput="onCornerRadiusInput(event)">
                         <span class="px">px</span>
                         <div class="pixel-count-btns">
-                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
-                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1" onclick="onCornerRadiusUp(event)"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1" onclick="onCornerRadiusDown(event)"></i></button>
                         </div>
                       </div>
                     </div>
                     <div class="style-group">
                       <label>Width</label>
-                      <div class="pixel-count">
-                        <input type="text" class="form-control" value="550">
+                      <div class="width pixel-count">
+                        <input type="text" class="form-control" value="550" oninput="onWidthInput(event)">
                         <span class="px">px</span>
                         <div class="pixel-count-btns">
-                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1"></i></button>
-                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1"></i></button>
+                          <button type="button" class="pixel-up"><i class="icon icon-arrow-up-1" onclick="onWidthUp(event)"></i></button>
+                          <button type="button" class="pixel-down"><i class="icon icon-arrow-down-1" onclick="onWidthDown(event)"></i></button>
                         </div>
                       </div>
                     </div>

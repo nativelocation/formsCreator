@@ -1,14 +1,8 @@
 .hl_form-builder--sidebar .dragdrop-items > div {
 	background-color: #fff;
 	border-radius: 4px;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	/* -webkit-box-align: center;
-	-ms-flex-align: center; */
 	align-items: center;
-	/* -webkit-box-pack: justify;
-	-ms-flex-pack: justify; */
 	justify-content: space-between;
 	cursor: all-scroll;
 }
@@ -21,9 +15,22 @@
 	margin-bottom: 10px;
 }
 
+.hl_widget_wrap {
+
+}
+
 .hl_widget_class {
-	/* background-color: #b7b7b7; */
+	background-color: #fff;
 	padding: 10px 15px;
 	border-radius: 4px;
 	width: 100%;
+}
+
+.form-builder--wrap {
+	width: 550px;
+	max-width: unset;
+}
+
+._clear-element {
+	clear: left;
 }
